@@ -1,10 +1,25 @@
-import React from "react";
-import HeroSection from "./hero/components/HeroSection";
+import Image from "next/image";
+import HeroSection from "./landing/hero/HeroSection";
+import FeaturesSection from "./landing/Feature/FeaturesSection";
 
-export default function page() {
+export default function Page() {
   return (
-    <div className="" >
+    <div className="relative w-full text-white overflow-x-hidden">
+
+      {/* Fixed Background for Entire Website */}
+      <div className="fixed inset-0 -z-10">
+        <Image
+          src="/bg.png"
+          alt="Background"
+          fill
+          priority
+          className="object-cover opacity-20"
+        />
+      </div>
+
       <HeroSection />
+      <FeaturesSection />
+
     </div>
   );
 }

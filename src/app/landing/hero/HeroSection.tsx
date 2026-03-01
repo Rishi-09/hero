@@ -4,18 +4,8 @@ import Image from "next/image";
 import "./HeroSection.css";
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-full overflow-x-hidden text-white">
-      {/* Background */}
-      <div className="fixed inset-0 z-[-1]">
-        <Image
-          src="/bg.png"
-          alt="Background"
-          fill
-          priority
-          className="object-cover opacity-20"
-        />
-      </div>
-
+    <section className="relative w-full min-h-screen flex items-center overflow-x-hidden text-white">
+      
       {/* Smooth Green Atmospheric Glow */}
       <div
         className="
@@ -32,7 +22,8 @@ export default function HeroSection() {
       {/* MAIN CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto h-full px-12 flex items-center">
         {/* LEFT SIDE */}
-        <div className="max-w-2xl mt-10 relative right-50 top-25 ">
+        {/* <div className="max-w-2xl mt-10 relative right-50 top-25 "> */}
+        <div className="max-w-2xl mt-10">
           {/* Heading */}
           <h1
             className="heading text-6xl leading-[1.05]  font-medium tracking-wider text-white
@@ -47,7 +38,8 @@ export default function HeroSection() {
           </p>
 
           {/* Phones */}
-          <div className="relative w-175 h-140 right-50 -top-25 mt-10">
+          {/* <div className="relative w-175 h-140 right-50 -top-25 mt-10"> */}
+          <div className="relative w-[700px] h-[550px] mt-10">
             <Image
               src="/phones.png"
               alt="Phones"
@@ -63,14 +55,16 @@ export default function HeroSection() {
               alt="App Store"
               width={160}
               height={55}
-              className="  relative bottom-30 hover:scale-105 transition duration-300"
+              // className="  relative bottom-30 hover:scale-105 transition duration-300"
+              className="hover:scale-105 transition duration-300"
             />
             <Image
               src="/playStore.png"
               alt="Google Play"
               width={160}
               height={55}
-              className=" relative bottom-30 hover:scale-105 transition duration-300"
+              // className=" relative bottom-30 hover:scale-105 transition duration-300"
+              className="hover:scale-105 transition duration-300"
             />
           </div>
         </div>
