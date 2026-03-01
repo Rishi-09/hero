@@ -4,8 +4,7 @@ import FeaturesSection from "./landing/Feature/FeaturesSection";
 
 export default function Page() {
   return (
-    <div className="relative w-full text-white overflow-x-hidden">
-
+    <div className=" text-white space-y-30 overflow-x-hidden">
       {/* Fixed Background for Entire Website */}
       <div className="fixed inset-0 -z-10">
         <Image
@@ -19,7 +18,6 @@ export default function Page() {
 
       <HeroSection />
       <FeaturesSection />
-
     </div>
   );
 }

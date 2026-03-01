@@ -53,8 +53,8 @@ const Navbar = () => {
             <span className="absolute inset-0 bg-gradient-to-l from-green-500 to-green-800 rounded-full"></span>
             
             {/* The Button Content */}
-            <div className="relative px-6 py-2 bg-black rounded-full transition-all group-hover:bg-transparent">
-              <span className="text-white text-sm font-semibold">
+            <div className="relative px-3 py-1 bg-black rounded-full transition-all group-hover:bg-transparent">
+              <span className="text-white text-lg font-semibold">
                 Get Traverse
               </span>
             </div>
