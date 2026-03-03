@@ -1,6 +1,11 @@
 import Image from "next/image";
 import HeroSection from "./landing/hero/HeroSection";
 import FeaturesSection from "./landing/Feature/FeaturesSection";
+import ServerCoverage from "./landing/Servers/ServerCoverage";
+import PricingSection from "./landing/pricing/PricingSection";
+import InstantConnectionSection from "./landing/InstantConnection/InstantConnectionSection";
+import FAQSection from "./landing/FAQs/FAQSection";
+import CTASection from "./landing/Footer/CTASection";
 
 export default function Page() {
   return (
@@ -18,6 +23,11 @@ export default function Page() {
 
       <HeroSection />
       <FeaturesSection />
+      <ServerCoverage/>
+      <PricingSection/>
+      <InstantConnectionSection/>
+      <FAQSection/>
+      <CTASection/>
     </div>
   );
 }

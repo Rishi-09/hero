@@ -2,23 +2,25 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Inter } from "next/font/google";
-import { DM_Sans, Space_Grotesk } from "next/font/google";
+import { Inter, DM_Sans, Space_Grotesk } from "next/font/google";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-dm",
 });
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  variable: "--font-space",
 });
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
+  variable: "--font-inter",
 });
 
 const geistSans = Geist({
@@ -44,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.className} ${dmSans.className} ${spaceGrotesk} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${dmSans.variable} ${spaceGrotesk.variable} antialiased`}
       >
         <Navbar />
         {children}
