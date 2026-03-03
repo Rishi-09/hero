@@ -32,9 +32,9 @@ export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
-    <section className=" bg-[#010101] mih-h-screen py-8 text-white">
+    <section className="bg-[#010101] min-h-screen py-8 text-white relative">
       
-      <div className="max-w-7xl mx-auto  px-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Top Button */}
         <div className="flex justify-center mt-10 mb-6">
           <Button text={"FAQs"} />
@@ -45,21 +45,23 @@ export default function FAQSection() {
           className="
             font-[var(--font-space)]
             font-bold
-            text-[48px]
-            leading-[100%]
+            text-[32px] md:text-[40px] lg:text-[48px]
+            leading-[110%] md:leading-[100%]
             tracking-[-0.48px]
             text-center
             drop-shadow-[0_0_8.5px_rgba(255,255,255,0.07)]
-            mb-24
+            mb-12 md:mb-24
           "
         >
           Your questions, <span className="text-lime-400">covered</span>
         </h2>
 
         {/* Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 ">
-          {/* LEFT SIDE */}
-          <div className="space-y-6">
+        {/* Changed to flex-col on mobile, grid on md (tablets) and lg (laptops) */}
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-20 items-center lg:items-start">
+          
+          {/* LEFT SIDE (Questions) */}
+          <div className="space-y-4 md:space-y-6 w-full max-w-2xl">
             {faqs.map((faq, index) => {
               const isActive = activeIndex === index;
 
@@ -69,7 +71,7 @@ export default function FAQSection() {
                   onClick={() => setActiveIndex(isActive ? null : index)}
                   className={`
                     flex justify-between items-center
-                    px-6 py-5 rounded-xl cursor-pointer
+                    px-4 md:px-6 py-4 md:py-5 rounded-xl cursor-pointer
                     transition-all duration-300
                     ${
                       isActive
@@ -82,7 +84,7 @@ export default function FAQSection() {
                     className={`
                       font-[var(--font-space)]
                       font-medium
-                      text-[24px]
+                      text-[18px] md:text-[22px] lg:text-[24px]
                       leading-[118%]
                       tracking-[-0.24px]
                       ${isActive ? "text-black" : "text-white"}
@@ -92,9 +94,9 @@ export default function FAQSection() {
                   </p>
 
                   {isActive ? (
-                    <ChevronRight size={24} className="text-black" />
+                    <ChevronRight size={24} className="text-black shrink-0" />
                   ) : (
-                    <ChevronDown size={22} className="text-gray-400" />
+                    <ChevronDown size={22} className="text-gray-400 shrink-0" />
                   )}
                 </div>
               );
@@ -104,18 +106,20 @@ export default function FAQSection() {
           {/* RIGHT SIDE ANSWER BOX */}
           <div
             className="
-              w-[410px]
-              h-[400px]
+              w-full
+              max-w-[410px]
+              h-auto min-h-[250px] lg:h-[400px]
               rounded-[17px]
               bg-gradient-to-b
               from-white
               to-[rgba(52,52,52,0.63)]
               p-[1px]
+              mt-6 lg:mt-0
             "
           >
-            <div className="w-full h-full rounded-[16px] bg-[#010101] p-10">
+            <div className="w-full h-full rounded-[16px] bg-[#010101] p-6 md:p-10">
               {activeIndex !== null ? (
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                   {faqs[activeIndex].answer}
                 </p>
               ) : (

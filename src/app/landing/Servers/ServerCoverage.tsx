@@ -4,13 +4,13 @@ import Image from "next/image";
 
 export default function ServerCoverage() {
   return (
-    <section className="w-screen bg-transparent">
+    <section className="w-full bg-transparent overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-t from-transparent to-[#010101]" />
+      
       {/* ===== Top Content ===== */}
-      <div className="flex flex-col items-center  ">
+      <div className="flex flex-col items-center px-6">
         {/* Servers Neon Pill */}
         <div className="relative mb-6 inline-block">
-          {/* Full Soft Glow */}
           <div
             className="
               absolute inset-0
@@ -21,7 +21,6 @@ export default function ServerCoverage() {
             "
           ></div>
 
-          {/* Strong Right Side Glow */}
           <div className="absolute inset-0 rounded-full overflow-hidden">
             <style>
               {`
@@ -48,27 +47,31 @@ export default function ServerCoverage() {
         className="
           font-[var(--font-space)]
           font-bold
-          text-[48px]
-          leading-[100%]
+          text-[32px] md:text-[40px] lg:text-[48px]
+          leading-[1.1] lg:leading-[100%]
           tracking-[-0.01em]
           text-white
           text-center
-          mb-20
-           drop-shadow-[0_0_20px_rgba(34,197,94,0.3)] text-glow-white
-
+          px-4
+          mb-10 lg:mb-20
+          drop-shadow-[0_0_20px_rgba(34,197,94,0.3)] text-glow-white
         "
       >
         Global <span className="text-lime-400">Server</span> Coverage
       </h2>
 
-      {/* ===== Full Screen Map ===== */}
-      <div className="relative w-full  h-screen bg-[#010101]">
-        <div className="absolute -top-30 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-[#010101] z-10" />
+      {/* ===== World Map Container ===== */}
+      {/* - min-h-[300px] ensures it doesn't disappear on tiny phones
+          - h-[50vh] for mobile/tablet to keep it concise
+          - lg:h-screen restores your perfect 14-inch layout
+      */}
+      <div className="relative w-full h-[40vh] md:h-[60vh] lg:h-screen bg-[#010101]">
+        <div className="absolute -top-10 lg:-top-30 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-[#010101] z-10" />
         <Image
           src="/world-map-dots.png"
           alt="World Map"
           fill
-          className="object-contain"
+          className="object-contain px-4 md:px-10"
           priority
         />
       </div>

@@ -24,7 +24,8 @@ function PricingCard({
   return (
     <div
       className={clsx(
-        "relative w-[420px]  rounded-[24px] p-[1px] transition-all duration-500",
+        /* Changed w-[420px] to be responsive: w-full on mobile, fixed only on lg+ */
+        "relative w-full lg:w-[420px] max-w-[450px] lg:max-w-none rounded-[24px] p-[1px] transition-all duration-500",
         className,
       )}
       style={
@@ -36,20 +37,20 @@ function PricingCard({
       }
     >
       <div
-        className="rounded-[24px] bg-[#171717] p-10 flex flex-col"
+        className="rounded-[24px] bg-[#171717] p-6 md:p-10 flex flex-col h-full"
         style={premium ? {} : { border: "1px solid #474747" }}
       >
         {/* HEADER SECTION */}
-        <div className="min-h-[190px]">
+        <div className="min-h-auto lg:min-h-[190px]">
           <h2
-            className="text-[48px] font-bold tracking-[-0.01em]"
+            className="text-[36px] md:text-[48px] font-bold tracking-[-0.01em]"
             style={{ fontFamily: "var(--font-space)" }}
           >
             {title}
           </h2>
 
           <p
-            className="mt-4 text-[20px] font-light tracking-[-0.01em] text-white/70"
+            className="mt-4 text-[18px] md:text-[20px] font-light tracking-[-0.01em] text-white/70"
             style={{ fontFamily: "var(--font-dm)" }}
           >
             {description}
@@ -88,7 +89,7 @@ function PricingCard({
           {features.map((feature, i) => (
             <li
               key={i}
-              className="flex items-center gap-3 text-[20px] font-semibold tracking-[-0.01em]"
+              className="flex items-center gap-3 text-[18px] md:text-[20px] font-semibold tracking-[-0.01em]"
               style={{ fontFamily: "var(--font-dm)" }}
             >
               {premium ? (
@@ -114,19 +115,21 @@ function PricingCard({
 
 export default function PricingSection() {
   return (
-    <section className="relative max-h-screen bg-[#010101] text-white flex flex-col items-center justify-center px-6">
-      <div className="flex justify-center mt-10 mb-6">
+    /* Changed max-h-screen to min-h-screen to allow scrolling on mobile */
+    <section className="relative min-h-screen bg-[#010101] text-white flex flex-col items-center py-20 px-6">
+      <div className="flex justify-center mb-6">
         <Button text={"Pricing"} />
       </div>
 
       <h1
-        className="text-[48px] font-bold tracking-[-0.01em] text-center drop-shadow-[0_0_30px_rgba(34,197,94,0.3)] text-glow-white"
+        className="text-[32px] md:text-[48px] font-bold tracking-[-0.01em] text-center drop-shadow-[0_0_30px_rgba(34,197,94,0.3)] text-glow-white"
         style={{ fontFamily: "var(--font-space)" }}
       >
         Plans to Stay <span className="text-[#6CFF2E]">Secure</span>
       </h1>
 
-      <div className="mt-16 flex gap-12 items-start">
+      {/* Changed flex-row to flex-col for mobile, lg:flex-row for your 14" screen */}
+      <div className="mt-12 md:mt-16 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-start w-full max-w-7xl justify-center">
         <PricingCard
           type="Basic"
           title="Basic"
@@ -154,7 +157,6 @@ export default function PricingSection() {
           ]}
         />
       </div>
-      
     </section>
   );
 }
