@@ -25,8 +25,8 @@ export default function FeaturesSection() {
 
       {/* Main Heading */}
       <h2 className="text-[48px] leading-[100%] tracking-[-0.01em]  text-white text-glow-white bold-heading font-bold text-center mb-16">
-        What <span className="text-green-500 text-glow-green">Traverse</span>{" "}
-        Brings To You?
+        What <span className="text-green-500 text-glow-green">Traverse</span>{" "} 
+        Brings<br/> To You?
       </h2>
 
       {/* Features Grid */}

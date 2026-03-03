@@ -9,7 +9,7 @@ import CTASection from "./landing/Footer/CTASection";
 
 export default function Page() {
   return (
-    <div className=" text-white space-y-30 overflow-x-hidden">
+    <div className=" text-white  overflow-x-hidden">
       {/* Fixed Background for Entire Website */}
       <div className="fixed inset-0 -z-10">
         <Image

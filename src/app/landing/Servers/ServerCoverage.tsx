@@ -7,7 +7,7 @@ export default function ServerCoverage() {
     <section className="w-screen bg-transparent">
       
       {/* ===== Top Content ===== */}
-      <div className="flex flex-col items-center pt-24 pb-16">
+      <div className="flex flex-col items-center  ">
 
         {/* Servers Neon Pill */}
         <div className="relative mb-6 inline-block">
@@ -57,6 +57,7 @@ export default function ServerCoverage() {
           tracking-[-0.01em]
           text-white
           text-center
+          mb-20
            drop-shadow-[0_0_20px_rgba(34,197,94,0.3)] text-glow-white
 
         ">
@@ -66,7 +67,7 @@ export default function ServerCoverage() {
       
 
       {/* ===== Full Screen Map ===== */}
-      <div className="relative w-full h-screen bg-black">
+      <div className="relative w-full  h-screen bg-[#010101]">
 
         <Image
           src="/world-map-dots.png"

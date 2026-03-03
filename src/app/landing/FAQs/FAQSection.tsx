@@ -32,11 +32,11 @@ export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-40 bg-[#010101] text-white">
-      <div className="max-w-7xl mx-auto px-12">
+    <section className=" bg-[#010101] mih-h-screen py-8 text-white">
+      <div className="max-w-7xl mx-auto  px-12">
 
         {/* Top Button */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center mt-10 mb-6">
           <Button text={"FAQs"} />
         </div>
 
@@ -60,7 +60,7 @@ export default function FAQSection() {
         </h2>
 
         {/* Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 ">
 
           {/* LEFT SIDE */}
           <div className="space-y-6">

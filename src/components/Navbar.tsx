@@ -60,26 +60,28 @@ const Navbar = () => {
           {/* Gradient Border Button */}
           <Link
             href="/get-started"
-            className="relative group p-[1.5px] inline-flex items-center justify-center rounded-full overflow-hidden transition-transform active:scale-95"
+            className="
+    relative
+    inline-flex
+    items-center
+    justify-center
+    px-8
+    py-3
+    rounded-full
+    text-white
+    font-semibold
+    transition-all
+    duration-300
+    border
+    border-lime-400
+    bg-black
+    shadow-[0_0_10px_rgba(124,255,0,0.6)]
+    hover:bg-lime-400
+    hover:text-black
+    hover:shadow-[0_0_10px_rgba(124,255,0,0.9)]
+  "
           >
-            {/* The Animated Spinning Gradient Layer */}
-            <span
-              className="absolute inset-[-1000%] animate-spin-slow opacity-100 group-hover:opacity-100 transition-opacity"
-              style={{
-                background:
-                  "conic-gradient(from 90deg at 50% 50%, transparent 0%, transparent 60%, #22c55e 90%, #4ade80 100%)",
-              }}
-            />
-
-            {/* The Button Body (Masks the center of the spinning gradient) */}
-            <div className="relative px-6 py-2 bg-black rounded-full transition-all group-hover:bg-zinc-900 flex items-center gap-2">
-              <span className="text-white text-lg font-semibold tracking-wide">
-                Get Traverse
-              </span>
-
-              {/* Subtle Glow Effect on Hover */}
-              <div className="absolute inset-0 rounded-full group-hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-shadow pointer-events-none" />
-            </div>
+            Get Traverse
           </Link>
         </div>
       </div>

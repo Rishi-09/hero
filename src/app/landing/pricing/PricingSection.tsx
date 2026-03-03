@@ -121,8 +121,8 @@ function PricingCard({
 
 export default function PricingSection() {
   return (
-    <section className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-6">
-      <div className="flex justify-center mb-6">
+    <section className="relative max-h-screen  text-white flex flex-col items-center justify-center px-6">
+      <div className="flex justify-center mt-10 mb-6">
         <Button text={"Pricing"} />
       </div>
 
