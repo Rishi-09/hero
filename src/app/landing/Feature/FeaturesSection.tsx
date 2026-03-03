@@ -5,8 +5,7 @@ import FeatureCard from "./FeatureCard";
 
 export default function FeaturesSection() {
   return (
-    // <section className="mt-20 w-full bg-black py-28 px-6 md:px-20 overflow-hidden">
-    <section className="w-full mt-20 py-28 px-6 md:px-20 lg:pr-40 overflow-hidden">
+    <section className="w-full mt-10 md:mt-20 py-16 md:py-28 px-6 md:px-20 lg:pr-40 overflow-hidden">
       <style>
         {`
           @keyframes spin-slow {
@@ -18,19 +17,26 @@ export default function FeaturesSection() {
           }
         `}
       </style>
+
       {/* Top Label */}
       <div className="flex justify-center mb-6">
         <Button text={"Features"} />
       </div>
 
       {/* Main Heading */}
-      <h2 className="text-[48px] leading-[100%] tracking-[-0.01em]  text-white text-glow-white bold-heading font-bold text-center mb-16">
+      {/* Changed text size to be fluid: 32px on mobile, 48px on laptop */}
+      <h2 className="text-[32px] md:text-[40px] lg:text-[48px] leading-[1.1] md:leading-[100%] tracking-[-0.01em] text-white text-glow-white bold-heading font-bold text-center mb-10 md:mb-16">
         What <span className="text-green-500 text-glow-green">Traverse</span>{" "} 
-        Brings<br/> To You?
+        Brings<br className="hidden md:block" /> To You?
       </h2>
 
       {/* Features Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+      {/* - grid-cols-1: Single column for mobile 
+          - md:grid-cols-2: Your perfect layout for tablets/laptops 
+          - gap-6: Smaller gap for mobile to save space
+          - md:gap-10: Restored gap for larger screens
+      */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-10 max-w-7xl mx-auto">
         <FeatureCard
           title="Global Server Access"
           desc="Connect to high-speed servers worldwide with seamless performance."
@@ -38,7 +44,7 @@ export default function FeaturesSection() {
         />
 
         <FeatureCard
-          title="Fast,Steady Performance"
+          title="Fast, Steady Performance"
           desc="Optimized routing ensures ultra-fast browsing and streaming."
           type="performance"
         />
