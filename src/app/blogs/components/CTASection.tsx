@@ -23,57 +23,10 @@ export default function CTASection() {
             shadow-[0_-30px_80px_rgba(16,255,0,0.35)]
           "
         />
-        
       </div>
- 
+
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        {/* ================= TOP CTA CARD ================= */}
-        <div
-          className="relative -mt-32 rounded-[28px] overflow-hidden
-          border border-white/5
-          bg-[linear-gradient(90deg,#0d0f14_0%,#0a0c10_50%,#061b0f_100%)]
-          p-12 md:p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between"
-        >
-          {/* LEFT CONTENT */}
-          <div className="max-w-xl z-10 text-center lg:text-left">
-            <h3 className="font-bold font-['Space_Grotesk'] text-[32px] md:text-[40px] lg:text-[48px] leading-[115%] tracking-[-0.02em] mb-6 lg:mb-10">
-              Don’t miss what’s <br className="hidden lg:block" /> coming next
-            </h3>
-
-            <div className="flex flex-col md:flex-row gap-4 items-center justify-center lg:justify-start">
-              <input
-                type="email"
-                placeholder="Enter Your Email"
-                className="w-full md:w-[300px] h-[52px] px-6 rounded-full
-                bg-[#0b0f14] border border-lime-400/70
-                text-white outline-none
-                placeholder:text-gray-400 focus:border-lime-400"
-              />
-
-              <button
-                className="w-full md:w-auto h-[52px] px-10 rounded-full
-                bg-lime-400 text-black font-semibold
-                border-2 border-lime-400
-                transition-all duration-300 ease-in-out
-                hover:bg-transparent hover:text-lime-400"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-
-          {/* Earth Image */}
-          {/* Hidden on mobile to prevent layout breakage, visible from lg up */}
-          <div className="absolute hidden lg:block w-[45%] -right-30 -top-1 h-full pointer-events-none">
-            <Image
-              src="/earth.png"
-              alt="Earth"
-              fill
-              className="object-cover object-top-left scale-[1.1]
-              drop-shadow-[0_0_60px_rgba(255,255,255,0.25)]"
-            />
-          </div>
-        </div>
+       
         {/* ================= FOOTER AREA ================= */}
         {/* Stacked on mobile, grid on desktop */}
         <div className="mt-9 lg:mt-16 lg:mb-0 flex flex-col lg:grid lg:grid-cols-3 items-center lg:items-start gap-12 lg:gap-0 ml-12">
