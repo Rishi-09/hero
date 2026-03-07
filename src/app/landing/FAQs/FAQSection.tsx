@@ -60,52 +60,70 @@ export default function FAQSection() {
         {/* Layout */}
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-20 items-center ">
           
-          {/* LEFT SIDE (Questions) */}
           <div className="font-['Space_Grotesk'] space-y-4 md:space-y-6 w-full max-w-2xl lg:ml-25">
-            {faqs.map((faq, index) => {
-              const isActive = activeIndex === index;
+  {faqs.map((faq, index) => {
+    const isActive = activeIndex === index;
 
-              return (
-                <div
-                  key={index}
-                  onClick={() => setActiveIndex(isActive ? null : index)}
-                  className={`
-                    flex justify-between items-center
-                    px-4 md:px-6 py-4 md:py-5 rounded-xl cursor-pointer
-                    transition-all duration-300
-                    ${
-                      isActive
-                        ? "bg-[linear-gradient(90deg,rgba(190,238,3,0)_4%,rgba(190,238,3,0.8)_43.27%,rgba(102,210,84,0.8)_68.75%,rgba(22,185,158,0.8)_100%)]"
-                        : "hover:bg-white/5"
-                    }
-                  `}
-                >
-                  <p
-                    className={`
-                      font-['Space_Grotesk']
-                      font-medium
-                      text-[18px] md:text-[22px] lg:text-[24px]
-                      leading-[118%]
-                      tracking-[-0.24px]
-                      ${isActive ? "text-white" : "text-white"}
-                    `}
-                  >
-                    {faq.question}
-                  </p>
+    return (
+      <div key={index} className="w-full">
+        
+        {/* QUESTION */}
+        <div
+          onClick={() => setActiveIndex(isActive ? null : index)}
+          className={`
+            flex justify-between items-center
+            px-4 md:px-6 py-4 md:py-5 rounded-xl cursor-pointer
+            transition-all duration-300
+            ${
+              isActive
+                ? "bg-[linear-gradient(90deg,rgba(190,238,3,0)_4%,rgba(190,238,3,0.8)_43.27%,rgba(102,210,84,0.8)_68.75%,rgba(22,185,158,0.8)_100%)]"
+                : "hover:bg-white/5"
+            }
+          `}
+        >
+          <p
+            className="
+              font-medium
+              text-[18px] md:text-[22px] lg:text-[24px]
+              leading-[118%]
+              tracking-[-0.24px]
+              text-white
+            "
+          >
+            {faq.question}
+          </p>
 
-                  {isActive ? (
-                    <ChevronRight size={24} className="text-black shrink-0" />
-                  ) : (
-                    <ChevronDown size={22} className="text-gray-400 shrink-0" />
-                  )}
-                </div>
-              );
-            })}
-          </div>
+          {isActive ? (
+            <ChevronRight size={24} className="text-black shrink-0" />
+          ) : (
+            <ChevronDown size={22} className="text-gray-400 shrink-0" />
+          )}
+        </div>
+
+        {/* MOBILE ANSWER */}
+        <AnimatePresence>
+          {isActive && (
+            <motion.div
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 40, opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="lg:hidden px-4 pt-4 pb-6 text-gray-300 font-['DM_Sans']"
+            >
+              {faq.answer}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+      </div>
+    );
+  })}
+</div>
 
           {/* RIGHT SIDE ANSWER BOX */}
           <div
             className="
+              hidden lg:block
               font-['DM_Sans']
               w-full
               max-w-[410px]
