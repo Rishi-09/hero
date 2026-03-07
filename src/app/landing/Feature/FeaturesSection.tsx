@@ -23,30 +23,22 @@ export default function FeaturesSection() {
         <Button text={"Features"} />
       </div>
 
-      {/* Heading */}
-      <h2 className="text-[32px] md:text-[40px] lg:text-[48px] leading-[1.1] md:leading-[100%] tracking-[-0.01em] text-white font-bold text-center mb-10 md:mb-16">
-        
-        {/* MOBILE */}
-        <span className="block md:hidden">
-          What <span className="text-[#67FF1D]">Traverse</span>
-        </span>
-
-        {/* DESKTOP */}
-        <span className="hidden md:inline">
-          What <span className="text-[#67FF1D]">Traverse</span> Brings
-        </span>
-
-        <br className="hidden md:block" />
-
-        <span className="block md:inline">
-          Brings To You?
-        </span>
-
+      {/* Main Heading */}
+      {/* Changed text size to be fluid: 32px on mobile, 48px on laptop */}
+      <h2 className="text-[32px] md:text-[40px] lg:text-[48px] leading-[1.1] md:leading-[100%] tracking-[-0.01em] text-white text-glow-white bold-heading font-bold text-center mb-10 md:mb-16">
+        What <span className="text-[#67FF1D] text-glow-green">Traverse</span>{" "}
+        Brings
+        <br className="hidden md:block" /> To You?
       </h2>
 
       {/* Features Grid */}
+      {/* - grid-cols-1: Single column for mobile 
+          - md:grid-cols-2: Your perfect layout for tablets/laptops 
+          - gap-6: Smaller gap for mobile to save space
+          - md:gap-10: Restored gap for larger screens
+      */}
+      {/* Features Grid */}
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-
         <FeatureCard
           title="Global Server Access"
           desc="Connect to servers easily across the globe"
@@ -82,7 +74,6 @@ export default function FeaturesSection() {
           desc="Stops internet access until your VPN is back"
           type="kill"
         />
-
       </div>
     </section>
   );
