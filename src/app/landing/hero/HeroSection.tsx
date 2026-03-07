@@ -33,19 +33,19 @@ export default function HeroSection() {
           </h1>
 
           {/* Subtext */}
-          <p className="mt-6 text-gray-300 text-lg md:text-xl lg:text-2xl max-w-lg">
+          <p className="font-['DM Sans'] mt-6 -mb-[-10] text-gray-300 text-lg md:text-xl lg:text-2xl max-w-lg">
             Access worldwide content and keep your digital life shielded
           </p>
 
-          {/* Phones Image Container */}
           {/* Earth for Mobile */}
-<div className="flex justify-center items-center mt-8 md:hidden">
-  <div className="relative w-[400px] h-[460px]">
+<div className="flex justify-center items-center mt-4 md:hidden">
+  <div className="relative w-[260px] h-[260px]">
     <Image
       src="/earth.png"
       alt="Earth"
       fill
-      className="object-contain animate-[spin_100s_linear_infinite_reverse] "
+      sizes="260px"
+      className="object-contain animate-[spin_100s_linear_infinite_reverse]"
     />
   </div>
 </div>
@@ -82,18 +82,24 @@ export default function HeroSection() {
       </div>
 
       {/* MASSIVE CROPPED EARTH */}
-      {/* Adjusted responsiveness: scale down for tablets, hide on small mobile to prevent overlap */}
-      <div className="absolute right-[-20%] lg:right-[-12%] top-[22%] lg:top-[62%] 
-                      scale-110 md:scale-150 lg:scale-220 -translate-y-1/2 
-                      w-[300px] h-[400px] md:w-[600px] md:h-[1000px] lg:w-[600px] lg:h-[1600px] 
-                      hidden md:block -z-10 opacity-50 lg:opacity-100 ">
-        <Image
-          src="/earth.png"
-          alt="Earth"
-          fill
-          className="object-contain animate-[spin_100s_linear_infinite_reverse] drop-shadow-[0_0_50px_rgba(34,197,94,0.9)]"
-        />
-      </div>
+<div
+  className="absolute right-[-20%] lg:right-[-12%] top-[10%] lg:top-[62%]
+  scale-110 md:scale-150 lg:scale-[2.2] -translate-y-1/2
+  w-[300px] h-[400px] md:w-[600px] md:h-[1000px] lg:w-[600px] lg:h-[1600px]
+  hidden md:block -z-10 opacity-50 lg:opacity-100"
+>
+  <Image
+    src="/earth.png"
+    alt="Earth background globe"
+    fill
+    sizes="(max-width: 768px) 300px,
+           (max-width: 1024px) 600px,
+           600px"
+    priority={false}
+    loading="lazy"
+    className="object-contain animate-[spin_100s_linear_infinite] drop-shadow-[0_0_50px_rgba(34,197,94,0.9)]"
+  />
+</div>
     </section>
   );
 }
