@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function InstantConnectionSection() {
   return (
-    <section className="relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden text-white py-20 lg:py-0">
+    <section className="relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden text-white py-20 lg:py-40">
       <div className="absolute top-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-t from-transparent to-[#010101]" />
       
       <div className="relative w-full max-w-[1600px] mx-auto px-6 md:px-8">
@@ -21,10 +21,10 @@ export default function InstantConnectionSection() {
               font-['Space_Grotesk']
               text-white
               drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]
-              lg:drop-shadow-[0_0_35px_rgba(255,255,255,0.6)]
+              lg:drop-shadow-[0_0_35px_rgba(255,255,255,0.5)]
               
               /* Laptop Positioning */
-              lg:relative lg:left-17 lg:mb-40
+              lg:relative lg:left-30 lg:mb-40
               
               /* Mobile/Tablet Adjustments */
               text-center lg:text-left
@@ -44,11 +44,11 @@ export default function InstantConnectionSection() {
               font-bold
               text-white
               drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]
-              lg:drop-shadow-[0_0_35px_rgba(255,255,255,0.6)]
+              lg:drop-shadow-[0_0_35px_rgba(255,255,255,0.5)]
               
               /* Laptop Positioning */
               lg:text-right
-              lg:relative lg:right-50 lg:mt-8
+              lg:relative lg:right-20 lg:mt-8
               
               /* Mobile/Tablet Adjustments */
               text-center

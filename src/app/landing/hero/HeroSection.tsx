@@ -1,10 +1,10 @@
-"use client";
+
 
 import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen flex items-center overflow-hidden py-20 lg:py-0">
+    <section className="relative w-full min-h-screen flex items-center overflow py-30 lg:py-0 mt-20">
       {/* Smooth Green Atmospheric Glow */}
       <div
         className="
@@ -19,7 +19,7 @@ export default function HeroSection() {
       />
 
       {/* MAIN CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center">
+      <div className="relative z-10 max-w-7xl  pl-125 pr-0 md:pr-4 flex flex-col lg:flex-row items-center ">
         
         {/* LEFT SIDE CONTENT WRAPPER */}
         {/* Note: xl:right-100 preserved for your 14-inch layout */}
@@ -27,10 +27,9 @@ export default function HeroSection() {
           
           {/* Heading */}
           <h1
-            className="text-4xl md:text-5xl lg:text-6xl leading-tight lg:leading-[1.05] font-medium tracking-wider text-white
-              drop-shadow-[0_0_20px_rgba(34,197,94,0.4)] text-glow-white"
+            className="font-['Space_Grotesk'] text-4xl md:text-6xl lg:text-5xl leading-tight lg:leading-[1.05] font-light tracking-wider text-[#FFFFFF] drop-shadow-[0_0_0px_rgba(34,197,94,0.2)] text-glow-white "
           >
-            Privacy that follows you everywhere
+            Privacy that follows <br/> you everywhere
           </h1>
 
           {/* Subtext */}
@@ -40,18 +39,19 @@ export default function HeroSection() {
 
           {/* Phones Image Container */}
           {/* On mobile, we remove the negative offsets so it stays in flow */}
-          <div className="relative w-full max-w-[350px] md:max-w-[500px] lg:w-[700px] h-[300px] md:h-[450px] lg:h-[550px] 
-                          lg:relative lg:right-50 lg:-top-25 mt-10">
-            <Image
-              src="/phones.png"
-              alt="Phones"
-              fill
-              className="object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.95)]"
-            />
-          </div>
+          <div className="relative w-full max-w-[450px] md:max-w-[650px] lg:w-[900px] 
+                h-[350px] md:h-[500px] lg:h-[650px] 
+                lg:relative lg:right-40 lg:-top-30 mt-5">
+  <Image
+    src="/phones.png"
+    alt="Phones"
+    fill
+    className="object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.95)]"
+  />
+</div>
 
           {/* Store Buttons */}
-          <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 mt-8 lg:mt-0 lg:relative lg:bottom-30">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 mt-6 lg:mt-0 lg:relative lg:bottom-50">
             <Image
               src="/appStore.png"
               alt="App Store"
@@ -72,15 +72,15 @@ export default function HeroSection() {
 
       {/* MASSIVE CROPPED EARTH */}
       {/* Adjusted responsiveness: scale down for tablets, hide on small mobile to prevent overlap */}
-      <div className="absolute right-[-20%] lg:right-[-12%] top-[70%] lg:top-[85%] 
+      <div className="absolute right-[-20%] lg:right-[-12%] top-[22%] lg:top-[62%] 
                       scale-110 md:scale-150 lg:scale-220 -translate-y-1/2 
-                      w-[400px] h-[400px] md:w-[600px] md:h-[600px] lg:w-[800px] lg:h-[800px] 
-                      hidden md:block -z-10 opacity-50 lg:opacity-100">
+                      w-[300px] h-[400px] md:w-[600px] md:h-[1000px] lg:w-[600px] lg:h-[1600px] 
+                      hidden md:block -z-10 opacity-50 lg:opacity-100 ">
         <Image
           src="/earth.png"
           alt="Earth"
           fill
-          className="object-contain animate-[spin_100s_linear_infinite] drop-shadow-[0_0_50px_rgba(34,197,94,0.9)]"
+          className="object-contain animate-[spin_100s_linear_infinite_reverse] drop-shadow-[0_0_50px_rgba(34,197,94,0.9)]"
         />
       </div>
     </section>

@@ -16,8 +16,8 @@ export default function Button({ text }: stringProp) {
       />
 
       {/* The Button Body (Masks the center of the spinning gradient) */}
-      <div className="relative px-6 py-2 bg-black rounded-full transition-all group-hover:bg-zinc-900 flex items-center gap-2">
-        <span className="text-white text-lg font-semibold tracking-wide">
+      <div className="relative px-10 py-5 bg-black rounded-full transition-all group-hover:bg-zinc-900 flex items-center gap-2">
+        <span className="text-white text-2xl font-semibold tracking-wide">
           {text}
         </span>
 
