@@ -56,36 +56,39 @@ export default function FeaturesSection() {
             />
           </div>
         </div>
-        <div className="w-[510px]">
-          <FeatureCard
-            title="Multiple Devices"
-            desc="Protect all your devices with one account"
-            type="devices"
-          />
-        </div>
+        <div className="flex gap-10 mx-auto">
+          <div className="w-[500px]">
+            <FeatureCard
+              title="Multiple Devices"
+              desc="Protect all your devices with one account"
+              type="devices"
+            />
+          </div>
 
-        <div className="w-140">
-          <FeatureCard
-            title="Split Tunneling"
-            desc="Decide which app takes the secure path"
-            type="split"
-          />
+          <div className="w-140">
+            <FeatureCard
+              title="Split Tunneling"
+              desc="Decide which app takes the secure path"
+              type="split"
+            />
+          </div>
         </div>
+        <div className="flex gap-10 mx-auto">
+          <div className="w-118">
+            <FeatureCard
+              title="Wi-Fi Protection"
+              desc="Guard your data on shared and public hotspots"
+              type="wifi"
+            />
+          </div>
 
-        <div className="w-118">
-          <FeatureCard
-            title="Wi-Fi Protection"
-            desc="Guard your data on shared and public hotspots"
-            type="wifi"
-          />
-        </div>
-
-        <div className="w-145.25">
-          <FeatureCard
-            title="Kill Switch"
-            desc="Stops internet access until your VPN is back"
-            type="kill"
-          />
+          <div className="w-145.25">
+            <FeatureCard
+              title="Kill Switch"
+              desc="Stops internet access until your VPN is back"
+              type="kill"
+            />
+          </div>
         </div>
       </div>
     </section>
