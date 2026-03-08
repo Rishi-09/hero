@@ -1,24 +1,53 @@
 import React from "react";
 
-interface stringProp {
+type ButtonProps = {
   text: string;
-}
+};
 
-export default function Button({ text }: stringProp) {
+const Button = ({ text }: ButtonProps) => {
   return (
-    <div className="group relative is-flex items-center justify-center p-[2px] overflow-hidden rounded-full">
-      {/* 1. The Rotating Gradient Background (The "Border") */}
-      <div className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#67FF1D_0%,transparent_25%,#67FF1D_50%,transparent_75%,#67FF1D_100%)]" />
+    <button
+      className="group relative flex items-center justify-center overflow-hidden transition-all duration-300"
+      style={{
+        width: "100px",
+        height: "45px",
+        borderRadius: "23px",
+        padding: "16px 20px",
+        gap: "10px",
+        background: "transparent",
+        border: "1px solid transparent",
+        boxShadow: "0px 0px 4.6px 0px #73D64896",
+      }}
+    >
+      {/* Rotating Gradient Border */}
+      <div
+        className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite]"
+        style={{
+          background:
+            "conic-gradient(from 0deg, transparent 0%, #73D648 25%, transparent 50%, #73D648 75%, transparent 100%)",
+        }}
+      />
 
-      {/* 2. The Inner Button (Mask) */}
-      <div className="relative flex items-center justify-center px-12 py-5 rounded-full bg-black/90 backdrop-blur-xl w-full h-full">
-        <span className="text-white text-5xl font-bold tracking-tight z-10">
-          {text}
-        </span>
-      </div>
+      {/* Inner Mask */}
+      <div
+        className="absolute inset-[1px] group-hover:bg-black/80 transition-colors"
+        style={{
+          borderRadius: "22px",
+          background: "#0a0a0a",
+        }}
+      />
 
-      {/* 3. Outer Glow (Optional, to match the video's neon feel) */}
-      <div className="absolute inset-0 rounded-full shadow-[0_0_20px_2px_#67FF1D33] pointer-events-none" />
-    </div>
+      <span
+        className="relative z-10 text-sm font-medium tracking-wide"
+        style={{
+          color: "#FFFFFFD0",
+          fontSize: "14px",
+        }}
+      >
+        {text}
+      </span>
+    </button>
   );
-}
+};
+
+export default Button;
