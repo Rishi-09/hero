@@ -39,16 +39,16 @@ export default function FeaturesSection() {
       */}
       {/* Features Grid */}
 
-      <div className="max-w-[1250px] mx-auto justify-center align-middle flex flex-wrap gap-10">
-        <div className="flex gap-10 mx-auto">
-          <div className="w-106">
+      <div className="max-w-[1250px] mx-auto justify-center align-middle flex flex-wrap gap-6 md:gap-10">
+        <div className="flex flex-col lg:flex-row gap-10 mx-auto">
+          <div className="w-full lg:w-106">
             <FeatureCard
               title="Global Server Access"
               desc="Connect to servers easily across the globe"
               type="planet"
             />
           </div>
-          <div className="w-158.5">
+          <div className="w-full lg:w-158.5">
             <FeatureCard
               title="Fast, Steady Performance"
               desc="Get high speed servers so your work never slow down"
@@ -56,8 +56,8 @@ export default function FeaturesSection() {
             />
           </div>
         </div>
-        <div className="flex gap-10 mx-auto">
-          <div className="w-[500px]">
+        <div className="flex flex-col lg:flex-row gap-10 mx-auto">
+          <div className="w-full lg:w-[500px]">
             <FeatureCard
               title="Multiple Devices"
               desc="Protect all your devices with one account"
@@ -65,7 +65,7 @@ export default function FeaturesSection() {
             />
           </div>
 
-          <div className="w-140">
+          <div className="w-full lg:w-140">
             <FeatureCard
               title="Split Tunneling"
               desc="Decide which app takes the secure path"
@@ -73,8 +73,8 @@ export default function FeaturesSection() {
             />
           </div>
         </div>
-        <div className="flex gap-10 mx-auto">
-          <div className="w-118">
+        <div className="flex flex-col lg:flex-row gap-10 mx-auto">
+          <div className="w-full lg:w-118">
             <FeatureCard
               title="Wi-Fi Protection"
               desc="Guard your data on shared and public hotspots"
@@ -82,7 +82,7 @@ export default function FeaturesSection() {
             />
           </div>
 
-          <div className="w-145.25">
+          <div className="w-full lg:w-145.25">
             <FeatureCard
               title="Kill Switch"
               desc="Stops internet access until your VPN is back"

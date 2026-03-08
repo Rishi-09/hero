@@ -37,7 +37,7 @@ export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#010101] min-h-screen py-20 mb-20 text-white relative">
+    <section className="bg-[#010101] min-h-screen py-20 text-white relative">
       
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Top Button */}
@@ -58,7 +58,7 @@ export default function FAQSection() {
             mb-12 md:mb-24
           "
         >
-          Your questions, <span className="text-lime-400">covered</span>
+          Your questions, <br /> <span className="text-lime-400">covered</span>
         </h2>
 
         {/* Layout */}
@@ -179,7 +179,9 @@ export default function FAQSection() {
           </div>
         </div>
       </div>
-      <div className="absolute top-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-t from-transparent to-[#010101]" />
+      {/* Bottom fade into footer */}
+<div className="absolute bottom-0 left-0 w-full h-40 pointer-events-none 
+bg-gradient-to-b from-transparent via-[#010101] to-[#030A00]" />
     </section>
   );
 }
