@@ -37,7 +37,7 @@ export default function InstantConnectionSection() {
           {/* PHONES IMAGE */}
           <div className="relative flex justify-center items-center w-full mb-8 lg:mb-0 lg:absolute lg:inset-0 z-10 pointer-events-none">
 
-            <div className="relative w-[260px] sm:w-[320px] md:w-[420px] lg:w-[900px] aspect-[9/10] lg:h-[1000px] lg:translate-x-10">
+            <div className="relative w-[260px] sm:w-[320px] md:w-[420px] lg:w-[900px] aspect-[9/10] lg:h-[1000px] lg:translate-x-8">
 
               <Image
                 src="/nphones.png"
