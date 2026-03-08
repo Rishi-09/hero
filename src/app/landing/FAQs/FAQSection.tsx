@@ -12,24 +12,24 @@ const faqs = [
       "Traverse VPN is a privacy-first service that encrypts your connection, hides your IP address, and helps you browse securely from anywhere.",
   },
   {
-    question: "Will Traverse slow down my internet?",
+    question: "What makes VPN different from standard VPN providers?",
     answer:
-      "Premium servers are optimized for speed and stability. Your final speed depends on location and network conditions, but streaming and daily browsing are built to stay smooth.",
+      "VPN is built specifically for enterprise and corporate environments. Unlike consumer VPN services, we provide scalable enterprise VPN solutions, centralized management, secure access control, and infrastructure designed for business continuity and data protection.",
   },
   {
-    question: "Can I use one account on multiple devices?",
+    question: "Can VPN support remote and hybrid teams?",
     answer:
-      "Yes. You can protect your phone, tablet, and desktop with one account, so your connection stays secure across your full device setup.",
+      "Yes. Our business VPN solutions are designed for distributed teams. Employees can securely access internal systems from anywhere while maintaining encrypted connections and policy-controlled access.",
   },
   {
-    question: "What does Kill Switch do?",
+    question: "Is VPN suitable for multi-location corporate environments?",
     answer:
-      "Kill Switch immediately blocks internet traffic if the VPN drops unexpectedly, preventing unprotected traffic from leaking your data.",
+      "Absolutely. Our corporate VPN solutions support site-to-site connectivity, enabling secure communication between offices, cloud environments, and remote users within a unified infrastructure.",
   },
   {
-    question: "Does Traverse support split tunneling?",
+    question: "How secure is your enterprise VPN service?",
     answer:
-      "Yes. Split tunneling lets you choose which apps use the VPN and which apps use your regular connection for better flexibility.",
+      "VPN uses advanced encryption protocols, secure tunneling, and centralized access management to protect corporate data. Our architecture is designed to reduce exposure to unauthorized access and network vulnerabilities.",
   },
 ];
 
@@ -141,25 +141,25 @@ export default function FAQSection() {
               lg:ml-20
             "
           >
-           <div className="w-full h-full rounded-[16px] bg-[#010101] p-6 md:p-10 overflow-hidden relative">
+           <div className="w-full h-full rounded-[16px] bg-[#010101] p-4 md:p-10 overflow-hidden relative">
   {/* mode="popLayout" use karne se purana text niche jayega aur naya turant upar aane lagega */}
   <AnimatePresence mode="popLayout">
     {activeIndex !== null ? (
       <motion.div
         key={activeIndex}
         // Initial: Text box ke kafi niche se start hoga aur blur rahega
-        initial={{ y: 60, opacity: 0, filter: "blur(15px)" }}
+        initial={{ y: 120, opacity: 0, filter: "blur(15px)" }}
         // Animate: Apni asli jagah (top) par aayega aur clear ho jayega
         animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
         // Exit: Purana answer niche ki taraf slide karke blur hote hue gayab hoga
-        exit={{ y: 60, opacity: 0, filter: "blur(15px)" }}
+        exit={{ y: 120, opacity: 0, filter: "blur(15px)" }}
         transition={{ 
           duration: 0.6, 
           ease: [0.22, 1, 0.36, 1] // Smooth exponential easing
         }}
         className="w-full flex flex-col justify-start items-start"
       >
-        <p className="font-['DM_Sans'] text-white text-base md:text-2xl leading-relaxed text-left">
+        <p className="font-['DM_Sans'] text-white text-base md:text-2xl leading-relaxed text-left pb-6 md:pb-10">
           {faqs[activeIndex].answer}
         </p>
       </motion.div>
