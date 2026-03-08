@@ -29,7 +29,7 @@ export default function HeroSection() {
           <h1
             className="font-['Space_Grotesk'] w-[380px] text-3xl md:text-6xl lg:text-5xl leading-tight lg:leading-[1.05] font-light tracking-wider text-[#FFFFFF] drop-shadow-[0_0_0px_rgba(34,197,94,0.2)] text-glow-white "
           >
-            Privacy that follows <br/> you everywhere
+            Privacy that follows you everywhere
           </h1>
 
           {/* Subtext */}
