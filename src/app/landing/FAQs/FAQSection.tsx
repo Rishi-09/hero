@@ -79,10 +79,10 @@ export default function FAQSection() {
             px-4 md:px-6 py-3 md:py-5 rounded-xl cursor-pointer
             transition-all duration-300
             ${
-              isActive
-                ? "bg-[linear-gradient(90deg,rgba(190,238,3,0)_4%,rgba(190,238,3,0.8)_43.27%,rgba(102,210,84,0.8)_68.75%,rgba(22,185,158,0.8)_100%)]"
-                : "hover:bg-white/5"
-            }
+  isActive
+    ? "lg:bg-[linear-gradient(90deg,rgba(190,238,3,0)_4%,rgba(190,238,3,0.8)_43.27%,rgba(102,210,84,0.8)_68.75%,rgba(22,185,158,0.8)_100%)]"
+    : "hover:bg-white/5"
+}
           `}
         >
           <p
@@ -97,27 +97,33 @@ export default function FAQSection() {
             {faq.question}
           </p>
 
-          {isActive ? (
-            <ChevronRight size={24} className="text-black shrink-0" />
-          ) : (
-            <ChevronDown size={22} className="text-gray-400 shrink-0" />
-          )}
+          {/* Laptop Arrow */}
+{isActive ? (
+  <>
+    <ChevronRight size={24} className="hidden lg:block text-black shrink-0" />
+    <ChevronDown size={22} className="lg:hidden text-gray-400 shrink-0 rotate-180" />
+  </>
+) : (
+  <ChevronDown size={22} className="text-gray-400 shrink-0" />
+)}
         </div>
 
         {/* MOBILE ANSWER */}
         <AnimatePresence>
-          {isActive && (
-            <motion.div
-              initial={{ y: 40, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 40, opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className="lg:hidden px-4 pt-3 pb-5 text-gray-300 text-[15px] leading-relaxed font-['DM_Sans']"
-            >
-              {faq.answer}
-            </motion.div>
-          )}
-        </AnimatePresence>
+  {isActive && (
+    <motion.div
+      initial={{ y: 40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: 40, opacity: 0 }}
+      transition={{ duration: 0.4 }}
+      className="lg:hidden mt-3 rounded-2xl p-[1px] bg-[linear-gradient(270deg,#16B99E,#BEEE03)]"
+    >
+      <div className="rounded-2xl bg-[#010101] px-4 pt-3 pb-5 text-gray-300 text-[15px] leading-relaxed font-['DM_Sans']">
+        {faq.answer}
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
 
       </div>
     );
