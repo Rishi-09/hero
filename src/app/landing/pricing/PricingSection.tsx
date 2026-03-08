@@ -117,7 +117,7 @@ export default function PricingSection() {
   return (
     /* Changed max-h-screen to min-h-screen to allow scrolling on mobile */
     <section className="relative min-h-screen bg-[#010101] text-white flex flex-col items-center py-20 px-6">
-      <div className="flex justify-center mb-6">
+      <div className="flex justify-center mb-10">
         <Button text={"Pricing"} />
       </div>
 
