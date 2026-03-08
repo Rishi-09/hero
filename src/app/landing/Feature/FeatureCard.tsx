@@ -374,14 +374,12 @@ export default function FeatureCard({ title, desc, type }: Props) {
                 </svg>
               </div>
 
-             <div className="w-[500px] h-[500px]" >
-               <Image
+              <Image
                 src="/lock.png"
                 alt="Lock"
                 fill
-                className="object-contain"
+                className="object-contain  "
               />
-             </div>
             </motion.div>
           </div>
         )}

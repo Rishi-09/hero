@@ -27,13 +27,13 @@ const Navbar = () => {
 
   return (
     <nav
-  className={`fixed top-4 left-[47%] -translate-x-1/2 w-[85%] z-50 transition-all duration-300 ${
+  className={`fixed left-1/2 -translate-x-1/2 w-[90%] z-50 transition-all duration-300 ${
     scrolled
-      ? "bg-[#030A00] rounded-full shadow-lg shadow-black/40"
-      : "bg-[#030A00] rounded-full"
+      ? "bg-[#010101] rounded-full shadow-lg shadow-black/40 top-4 px-5"
+      : "bg-transparent top-0 px-0"
   }`}
 >
-      <div className="max-w-11/12 mx-auto  px-[0px] h-16 flex items-center justify-between">
+      <div className="max-w-full mx-auto  px-5 h-16 flex items-center justify-between">
         {/* Left Section */}
         <div className="flex items-center gap-12">
           {/* Logo */}
