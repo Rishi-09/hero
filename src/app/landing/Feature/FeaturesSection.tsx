@@ -38,23 +38,25 @@ export default function FeaturesSection() {
           - md:gap-10: Restored gap for larger screens
       */}
       {/* Features Grid */}
-      <div className="max-w-[1250px] mx-auto justify-center align-middle flex flex-wrap gap-10">
-        <div className="w-[424px]">
-          <FeatureCard
-            title="Global Server Access"
-            desc="Connect to servers easily across the globe"
-            type="planet"
-          />
-        </div>
-        <div className="w-[634.6px]">
-          <FeatureCard
-            title="Fast, Steady Performance"
-            desc="Get high speed servers so your work never slow down"
-            type="performance"
-          />
-        </div>
 
-        <div className="w-[513.66px]">
+      <div className="max-w-[1250px] mx-auto justify-center align-middle flex flex-wrap gap-10">
+        <div className="flex gap-10 mx-auto">
+          <div className="w-106">
+            <FeatureCard
+              title="Global Server Access"
+              desc="Connect to servers easily across the globe"
+              type="planet"
+            />
+          </div>
+          <div className="w-158.5">
+            <FeatureCard
+              title="Fast, Steady Performance"
+              desc="Get high speed servers so your work never slow down"
+              type="performance"
+            />
+          </div>
+        </div>
+        <div className="w-[510px]">
           <FeatureCard
             title="Multiple Devices"
             desc="Protect all your devices with one account"
@@ -62,7 +64,7 @@ export default function FeaturesSection() {
           />
         </div>
 
-        <div className="w-[581.25px]">
+        <div className="w-140">
           <FeatureCard
             title="Split Tunneling"
             desc="Decide which app takes the secure path"
@@ -70,7 +72,7 @@ export default function FeaturesSection() {
           />
         </div>
 
-        <div className="w-[472.67px]">
+        <div className="w-118">
           <FeatureCard
             title="Wi-Fi Protection"
             desc="Guard your data on shared and public hotspots"
@@ -78,7 +80,7 @@ export default function FeaturesSection() {
           />
         </div>
 
-        <div className="w-[581.25]">
+        <div className="w-145.25">
           <FeatureCard
             title="Kill Switch"
             desc="Stops internet access until your VPN is back"
