@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav
-  className={`fixed left-1/2 -translate-x-1/2 w-full max-w-[1200px] z-50 transition-all duration-300 ${
+  className={`fixed left-1/2 -translate-x-1/2 w-full max-w-[1200px] z-50 transition-all duration-300 pt-3 md:pt-3${
     scrolled
       ? "bg-[#010101] rounded-full shadow-lg shadow-black/40 top-4 px-5"
       : "bg-transparent top-0 px-0"
@@ -79,7 +79,15 @@ const Navbar = () => {
             className="md:hidden text-white"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            {menuOpen ? (
+  <X size={28} />
+) : (
+  <div className="flex flex-col gap-1.5">
+    <span className="h-[3px] w-4 bg-white rounded-full"></span>
+    <span className="h-[3px] w-8 bg-white rounded-full"></span>
+    <span className="h-[3px] w-5 bg-white rounded-full"></span>
+  </div>
+)}
           </button>
         </div>
       
