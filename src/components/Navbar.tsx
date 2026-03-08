@@ -27,11 +27,13 @@ const Navbar = () => {
 
   return (
     <nav
-  className={`fixed left-1/2 -translate-x-1/2 w-full max-w-[1200px] z-50 transition-all duration-300 pt-3 md:pt-3${
-    scrolled
-      ? "bg-[#010101] rounded-full shadow-lg shadow-black/40 top-4 px-5"
-      : "bg-transparent top-0 px-0"
-  }`}
+  className={`fixed w-full z-50 transition-all duration-300 
+  top-0 px-5
+  lg:left-1/2 lg:-translate-x-1/2 lg:max-w-[1200px] 
+  ${scrolled
+    ? "bg-[#010101] lg:rounded-full shadow-lg shadow-black/40 lg:top-4"
+    : "bg-transparent"}
+`}
 >
       <div className="max-w-full mx-auto  px-5 h-16 flex items-center justify-between">
         {/* Left Section */}
