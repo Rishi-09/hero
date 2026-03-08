@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Space_Grotesk } from "next/font/google";
+import { useEffect } from "react";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -17,6 +18,17 @@ interface Props {
 
 export default function FeatureCard({ title, desc, type }: Props) {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const animateActive = isMobile || isHovered;
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024); // Tailwind lg breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const arcs = [
     {
@@ -33,8 +45,8 @@ export default function FeatureCard({ title, desc, type }: Props) {
     <div
       className="relative rounded-[32px] p-8 h-[290px] w-full overflow-hidden border border-white/[0.06] bg-[linear-gradient(180deg,#0B0B0B_0%,#050505_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
       // HOVER LOGIC MOVED TO MAIN CARD WRAPPER
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => !isMobile && setIsHovered(true)}
+      onMouseLeave={() => !isMobile && setIsHovered(false)}
     >
       {/* Top Highlight */}
       <div className="absolute inset-0 rounded-[32px] pointer-events-none bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.05),transparent_60%)]" />
@@ -52,7 +64,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
         {/* ================= PLANET ================= */}
         {type === "planet" && (
           <motion.div
-            animate={isHovered ? "hover" : "rest"}
+            animate={animateActive ? "hover" : "rest"}
             className="relative w-[350px] h-full"
           >
             <div className="absolute bottom-0 -left-10 w-40 h-40">
@@ -140,7 +152,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
             */
                     initial={{ left: "-4px", opacity: 0.5 }}
                     animate={
-                      isHovered
+                      animateActive
                         ? {
                             left: ["-4px", "140%"],
                             opacity: [0.5, 1, 1, 0],
@@ -148,7 +160,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
                         : { left: "-4px", opacity: 0.5 }
                     }
                     transition={{
-                      repeat: isHovered ? Infinity : 0,
+                      repeat: animateActive ? Infinity : 0,
                       duration: 2.5 + i * 0.5,
                       ease: "circIn",
                       delay: i * 0.4,
@@ -176,7 +188,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
 
             <motion.div
               animate={
-                isHovered
+                animateActive
                   ? {
                       x: ["-190px", "195px", "195px", "-190px"],
                       zIndex: [20, 20, 0, 0],
@@ -191,7 +203,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
                   : { x: "-190px", zIndex: 20, scale: 1 }
               }
               transition={
-                isHovered
+                animateActive
                   ? {
                       duration: 4,
                       repeat: Infinity,
@@ -217,7 +229,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
           <div className="relative w-72 h-72 mx-auto mb-20 flex items-center justify-center">
             <motion.div
               animate={
-                isHovered
+                animateActive
                   ? { scale: 1.4, opacity: 0.15 }
                   : { scale: 1, opacity: 0.2 }
               }
@@ -226,7 +238,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
 
             <motion.div
               animate={
-                isHovered
+                animateActive
                   ? {
                       filter:
                         "brightness(1.3) drop-shadow(0 0 25px rgba(182, 255, 0, 0.6))",
@@ -251,7 +263,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
 
             <motion.div
               animate={
-                isHovered
+                animateActive
                   ? {
                       x: [-40, -40, -40],
                       y: [-50, -30, -50],
@@ -261,7 +273,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
                   : { x: -40, y: -50, opacity: 1 }
               }
               transition={{
-                repeat: isHovered ? Infinity : 0,
+                repeat: animateActive ? Infinity : 0,
                 duration: 4,
                 ease: "easeInOut",
               }}
@@ -277,7 +289,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
 
             <motion.div
               animate={
-                isHovered
+                animateActive
                   ? {
                       x: [40, 40, 40],
                       y: [-50, -30, -50],
@@ -287,7 +299,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
                   : { x: 40, y: -50, opacity: 1 }
               }
               transition={{
-                repeat: isHovered ? Infinity : 0,
+                repeat: animateActive ? Infinity : 0,
                 duration: 4,
                 ease: "easeInOut",
               }}
@@ -309,7 +321,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
             {/* LOCK */}
             <motion.div
               animate={
-                isHovered
+                animateActive
                   ? {
                       y: [0, 0, 0],
                       filter: "drop-shadow(0 0 25px rgba(182,255,0,0.8))",
@@ -318,7 +330,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
               }
               transition={{
                 duration: 3,
-                repeat: isHovered ? Infinity : 0,
+                repeat: animateActive ? Infinity : 0,
                 ease: "easeInOut",
               }}
               className="relative w-24 h-24 flex items-center justify-center -bottom-2"
@@ -350,7 +362,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
                         strokeLinecap="round"
                         initial={{ opacity: 0 }}
                         animate={
-                          isHovered
+                          animateActive
                             ? {
                                 opacity: [0, 1, 0],
                                 filter: [
@@ -363,7 +375,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
                         }
                         transition={{
                           duration: 2.5,
-                          repeat: isHovered ? Infinity : 0,
+                          repeat: animateActive ? Infinity : 0,
                           delay: arc.delay,
                           ease: "easeInOut",
                         }}
@@ -387,21 +399,21 @@ export default function FeatureCard({ title, desc, type }: Props) {
           <div className="relative w-full h-40 mx-auto flex items-center justify-center">
             <motion.div
               initial={{ x: 0 }}
-              animate={isHovered ? { x: -70 } : { x: 0 }}
+              animate={animateActive ? { x: -70 } : { x: 0 }}
               transition={{ duration: 2, ease: [1, 1, 0.36, 1] }}
               className="absolute left-[calc(50%-150px)] w-[150px] h-[3px] bg-[#B6FF00] rounded-full shadow-[0_0_15px_rgba(182,255,0,0.8)] z-20"
             />
 
             <motion.div
               initial={{ x: 0 }}
-              animate={isHovered ? { x: 70 } : { x: 0 }}
+              animate={animateActive ? { x: 70 } : { x: 0 }}
               transition={{ duration: 2, ease: [1, 1, 0.36, 1] }}
               className="absolute right-[calc(50%-150px)] w-[150px] h-[3px] bg-[#B6FF00] rounded-full shadow-[0_0_15px_rgba(182,255,0,0.8)] z-20"
             />
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={
-                isHovered
+                animateActive
                   ? {
                       opacity: 1,
                       scale: 1,
@@ -411,7 +423,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
               }
               transition={{
                 duration: 0.45,
-                delay: isHovered ? 0.8 : 0,
+                delay: animateActive ? 0.8 : 0,
                 ease: "easeOut",
               }}
               className="relative z-10 w-20 h-20"
