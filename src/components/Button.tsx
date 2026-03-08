@@ -9,8 +9,8 @@ const Button = ({ text }: ButtonProps) => {
     <button
       className="group relative flex items-center justify-center overflow-hidden transition-all duration-300"
       style={{
-        width: "auto",
-        height: "45px",
+        width: "120px",
+        height: "50px",
         borderRadius: "23px",
         padding: "16px 20px",
         gap: "10px",
@@ -38,10 +38,10 @@ const Button = ({ text }: ButtonProps) => {
       />
 
       <span
-        className="relative z-10 text-sm font-medium tracking-wide"
+        className="relative z-10 text-sm font-light tracking-wide"
         style={{
           color: "#FFFFFFD0",
-          fontSize: "14px",
+          fontSize: "18px",
         }}
       >
         {text}
