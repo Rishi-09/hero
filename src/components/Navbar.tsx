@@ -26,15 +26,17 @@ const Navbar = () => {
   ];
 
   return (
-   <nav
-  className={`lg:fixed w-full z-50 transition-all duration-300  
-  lg:top-0 px-5
-  lg:left-1/2 lg:-translate-x-1/2 lg:max-w-[1200px] 
-  ${scrolled
-  ? "lg:bg-[#010101] lg:rounded-full lg:shadow-lg lg:shadow-black/40 lg:top-4"
-  : "lg:bg-transparent"}
+    <nav
+      className={`fixed w-full z-50 px-5 top-0
+                  lg:left-1/2 lg:-translate-x-1/2 lg:max-w-[1200px]
+                  lg:transition-[top,box-shadow,transform] lg:duration-300
+                  ${
+                    scrolled
+                      ? "bg-[#010101] lg:bg-[#010101] lg:rounded-full lg:shadow-lg lg:shadow-black/40 lg:top-4"
+                      : "bg-transparent"
+                  }
 `}
->
+    >
       <div className="max-w-full mx-auto px-5 h-16 flex items-center justify-between">
         {/* Left Section */}
         <div className="flex items-center gap-12">
@@ -65,34 +67,33 @@ const Navbar = () => {
 
         {/* Right Section */}
         <button className="hidden md:flex ml-75 text-gray-300 hover:text-white transition-colors">
-  <Languages size={20} />
-</button>
+          <Languages size={20} />
+        </button>
 
-          {/* Button */}
-          <Link
-            href="/get-started"
-            className="hidden md:inline-flex items-center justify-center px-2 py-1 rounded-full text-white font-semibold transition-all duration-300 border border-lime-400 bg-black shadow-[0_0_10px_rgba(124,255,0,0.6)] hover:bg-lime-400 hover:text-black hover:shadow-[0_0_10px_rgba(124,255,0,0.9)]"
-          >
-            Get Traverse
-          </Link>
+        {/* Button */}
+        <Link
+          href="/get-started"
+          className="hidden md:inline-flex items-center justify-center px-2 py-1 rounded-full text-white font-semibold transition-all duration-300 border border-lime-400 bg-black shadow-[0_0_10px_rgba(124,255,0,0.6)] hover:bg-lime-400 hover:text-black hover:shadow-[0_0_10px_rgba(124,255,0,0.9)]"
+        >
+          Get Traverse
+        </Link>
 
-          {/* Hamburger */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? (
-  <X size={28} />
-) : (
-  <div className="flex flex-col gap-1.5">
-    <span className="h-[3px] w-4 bg-white rounded-full"></span>
-    <span className="h-[3px] w-8 bg-white rounded-full"></span>
-    <span className="h-[3px] w-5 bg-white rounded-full"></span>
-  </div>
-)}
-          </button>
-        </div>
-      
+        {/* Hamburger */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? (
+            <X size={28} />
+          ) : (
+            <div className="flex flex-col gap-1.5">
+              <span className="h-[3px] w-4 bg-white rounded-full"></span>
+              <span className="h-[3px] w-8 bg-white rounded-full"></span>
+              <span className="h-[3px] w-5 bg-white rounded-full"></span>
+            </div>
+          )}
+        </button>
+      </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
