@@ -16,7 +16,7 @@ export default function InstantConnectionSection() {
           {/* TOP HEADING */}
           <h1
             className="
-              text-[40px] md:text-[60px] lg:text-[84px]
+              text-[64px] md:text-[60px] lg:text-[64px]
               leading-[1.1] lg:leading-[1.02]
               tracking-[-0.02em]
               font-bold
@@ -37,7 +37,7 @@ export default function InstantConnectionSection() {
           {/* PHONES IMAGE */}
           <div className="relative flex justify-center items-center w-full mb-8 lg:mb-0 lg:absolute lg:inset-0 z-10 pointer-events-none">
 
-            <div className="relative w-[330px] md:w-[420px] lg:w-[900px] aspect-[9/10] lg:h-[1000px]">
+            <div className="relative w-[330px] md:w-[420px] lg:w-[900px] aspect-[9/10] lg:h-[1000px] translate-x-10">
 
               <Image
                 src="/nphones.png"
@@ -54,7 +54,7 @@ export default function InstantConnectionSection() {
           {/* BOTTOM HEADING */}
           <h1
             className="
-              text-[40px] md:text-[60px] lg:text-[84px]
+              text-[40px] md:text-[60px] lg:text-[64px]
               font-['Space_Grotesk']
               leading-[1.1] lg:leading-[1.02]
               tracking-[-0.02em]
