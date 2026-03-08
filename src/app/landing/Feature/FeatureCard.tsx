@@ -178,7 +178,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
               animate={
                 isHovered
                   ? {
-                      x: ["-195px", "195px", "195px", "-195px"],
+                      x: ["-190px", "195px", "195px", "-190px"],
                       zIndex: [20, 20, 0, 0],
                       scale: [1, 1, 1, 1],
                       filter: [
@@ -188,7 +188,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
                         "blur(0px)",
                       ],
                     }
-                  : { x: "-195px", zIndex: 20, scale: 1 }
+                  : { x: "-190px", zIndex: 20, scale: 1 }
               }
               transition={
                 isHovered
