@@ -19,7 +19,7 @@ export default function HeroSection() {
       />
 
       {/* MAIN CONTENT */}
-      <div className="relative z-10 max-w-7xl  -right-127 flex flex-col lg:flex-row items-center ">
+      <div className="relative z-10 max-w-7xl  -right-122 flex flex-col lg:flex-row items-center ">
         
         {/* LEFT SIDE CONTENT WRAPPER */}
         {/* Note: xl:right-100 preserved for your 14-inch layout */}

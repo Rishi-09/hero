@@ -53,7 +53,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="hover:text-green-400 transition-colors text-lg"
+                className="hover:text-lime-400 transition-colors text-lg"
               >
                 {link.name}
               </Link>
@@ -62,14 +62,14 @@ const Navbar = () => {
         </div>
 
         {/* Right Section */}
-        <button className="hidden md:flex ml-30 text-gray-300 hover:text-white transition-colors">
+        <button className="hidden md:flex ml-75 text-gray-300 hover:text-white transition-colors">
   <Languages size={20} />
 </button>
 
           {/* Button */}
           <Link
             href="/get-started"
-            className="hidden md:inline-flex items-center justify-center px-8 py-2 rounded-full text-white font-semibold transition-all duration-300 border border-lime-400 bg-black shadow-[0_0_10px_rgba(124,255,0,0.6)] hover:bg-lime-400 hover:text-black hover:shadow-[0_0_10px_rgba(124,255,0,0.9)]"
+            className="hidden md:inline-flex items-center justify-center px-2 py-1 rounded-full text-white font-semibold transition-all duration-300 border border-lime-400 bg-black shadow-[0_0_10px_rgba(124,255,0,0.6)] hover:bg-lime-400 hover:text-black hover:shadow-[0_0_10px_rgba(124,255,0,0.9)]"
           >
             Get Traverse
           </Link>
