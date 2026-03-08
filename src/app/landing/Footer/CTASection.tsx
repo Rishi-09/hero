@@ -25,7 +25,7 @@ bg-gradient-to-t from-transparent to-[#030A00]"
             rounded-[100%]
             border-t
             border-lime-400/40
-            shadow-[0_-30px_80px_rgba(16,255,0,0.35)]
+            shadow-[0_-15px_40px_rgba(16,255,0,0.15)]
           "
         />
       </div>

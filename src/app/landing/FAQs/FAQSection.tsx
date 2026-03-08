@@ -62,9 +62,9 @@ export default function FAQSection() {
         </h2>
 
         {/* Layout */}
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-20 items-center ">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-20 items-start lg:items-center">
           
-          <div className="font-['Space_Grotesk'] space-y-4 md:space-y-6 w-full max-w-2xl lg:ml-25">
+          <div className="font-['Space_Grotesk'] space-y-3 md:space-y-6 w-full max-w-2xl mx-auto lg:ml-25">
   {faqs.map((faq, index) => {
     const isActive = activeIndex === index;
 
@@ -76,7 +76,7 @@ export default function FAQSection() {
           onClick={() => setActiveIndex(isActive ? null : index)}
           className={`
             flex justify-between items-center
-            px-4 md:px-6 py-4 md:py-5 rounded-xl cursor-pointer
+            px-4 md:px-6 py-3 md:py-5 rounded-xl cursor-pointer
             transition-all duration-300
             ${
               isActive
@@ -88,7 +88,7 @@ export default function FAQSection() {
           <p
             className="
               font-medium
-              text-[18px] md:text-[22px] lg:text-[24px]
+              text-[17px] md:text-[22px] lg:text-[24px]
               leading-[118%]
               tracking-[-0.24px]
               text-white
@@ -112,7 +112,7 @@ export default function FAQSection() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 40, opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="lg:hidden px-4 pt-4 pb-6 text-gray-300 font-['DM_Sans']"
+              className="lg:hidden px-4 pt-3 pb-5 text-gray-300 text-[15px] leading-relaxed font-['DM_Sans']"
             >
               {faq.answer}
             </motion.div>
