@@ -290,7 +290,6 @@ export default function FeatureCard({ title, desc, type }: Props) {
                 repeat: isHovered ? Infinity : 0,
                 duration: 4,
                 ease: "easeInOut",
-                
               }}
               className="absolute right-22 top-4 w-20 h-20 z-20 pointer-events-none mb-40"
             >
@@ -322,10 +321,10 @@ export default function FeatureCard({ title, desc, type }: Props) {
                 repeat: isHovered ? Infinity : 0,
                 ease: "easeInOut",
               }}
-              className="relative w-16 h-16 flex items-center justify-center"
+              className="relative w-24 h-24 flex items-center justify-center -bottom-2"
             >
               {/* WIFI ARCS */}
-              <div className="absolute -top-14 left-1/2 -translate-x-1/2 w-32 h-20">
+              <div className="absolute -top-18 left-1/2 -translate-x-1/2 w-40 h-28">
                 <svg
                   viewBox="0 0 24 24"
                   className="w-full h-full overflow-visible"
@@ -387,37 +386,34 @@ export default function FeatureCard({ title, desc, type }: Props) {
         {type === "kill" && (
           <div className="relative w-full h-40 mx-auto flex items-center justify-center">
             <motion.div
-              animate={isHovered ? { x: -45 } : { x: 0 }}
+              initial={{ x: 0 }}
+              animate={isHovered ? { x: -70 } : { x: 0 }}
+              transition={{ duration: 2, ease: [1, 1, 0.36, 1] }}
               className="absolute left-[calc(50%-150px)] w-[150px] h-[3px] bg-[#B6FF00] rounded-full shadow-[0_0_15px_rgba(182,255,0,0.8)] z-20"
             />
+
             <motion.div
-              animate={isHovered ? { x: 45 } : { x: 0 }}
+              initial={{ x: 0 }}
+              animate={isHovered ? { x: 70 } : { x: 0 }}
+              transition={{ duration: 2, ease: [1, 1, 0.36, 1] }}
               className="absolute right-[calc(50%-150px)] w-[150px] h-[3px] bg-[#B6FF00] rounded-full shadow-[0_0_15px_rgba(182,255,0,0.8)] z-20"
             />
             <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
               animate={
                 isHovered
                   ? {
                       opacity: 1,
                       scale: 1,
-                      filter:
-                        "brightness(1.2) drop-shadow(0 0 25px rgba(182, 255, 0, 0.7))",
+                      filter: "drop-shadow(0 0 25px rgba(182,255,0,0.7))",
                     }
-                  : { opacity: 0, scale: 1 }
+                  : { opacity: 0, scale: 0.8 }
               }
-              transition={
-                isHovered
-                  ? {
-                      opacity: { duration: 0.3, delay: 0.1 },
-                      scale: {
-                        type: "spring",
-                        stiffness: 150,
-                        damping: 12,
-                        delay: 0.1,
-                      },
-                    }
-                  : { duration: 0.15 }
-              }
+              transition={{
+                duration: 0.45,
+                delay: isHovered ? 0.8 : 0,
+                ease: "easeOut",
+              }}
               className="relative z-10 w-20 h-20"
             >
               <Image
