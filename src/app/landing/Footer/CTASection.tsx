@@ -24,13 +24,13 @@ export default function CTASection() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-[1000px] mx-auto px-6 relative z-10">
         {/* ================= TOP CTA CARD ================= */}
         <div
-          className="relative -mt-32 rounded-[28px] overflow-hidden
+          className="relative  -mt-32 rounded-[28px] overflow-hidden
           border border-white/5
           bg-[linear-gradient(90deg,#0d0f14_0%,#0a0c10_50%,#061b0f_100%)]
-          p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between"
+          px-8 py-10 md:px-10 md:py-12 lg:px-12 lg:py-14 flex flex-col lg:flex-row items-center justify-between"
         >
           {/* LEFT CONTENT */}
           <div className="max-w-xl z-10 text-center lg:text-left">
@@ -88,9 +88,9 @@ export default function CTASection() {
           </div>
 
           {/* RIGHT - Links Groups */}
-          <div className="flex flex-col sm:flex-row gap-12 md:gap-24 lg:mr-12">
+          <div className="flex flex-col sm:flex-row gap-12 md:gap-24 ml-auto">
             {/* Company Section */}
-            <div className="font-['DM_Sans'] flex flex-col items-center lg:items-start gap-3 text-white">
+            <div className="font-['DM_Sans'] flex flex-col items-center lg:items-end text-center lg:text-right gap-3 text-white">
               <span className="text-xl lg:text-2xl mb-2">Company</span>
               <a href="#" className="hover:text-lime-400 font-light transition text-lg">About Us</a>
               <a href="#" className="hover:text-lime-400 font-light transition text-lg">Contact Us</a>
@@ -98,7 +98,7 @@ export default function CTASection() {
             </div>
 
             {/* Platforms Section */}
-            <div className="font-['DM_Sans'] flex flex-col items-center lg:items-start gap-3 text-white">
+            <div className="font-['DM_Sans'] flex flex-col items-center lg:items-end text-center lg:text-right gap-3 text-white">
               <span className="text-xl lg:text-2xl mb-2">Platforms</span>
               <a href="#" className="hover:text-lime-400 font-light transition text-lg whitespace-nowrap">VPN for Android</a>
               <a href="#" className="hover:text-lime-400 font-light transition text-lg whitespace-nowrap">VPN for iPhone</a>
@@ -127,7 +127,7 @@ export default function CTASection() {
                   maskRepeat: 'no-repeat',
                   maskSize: 'contain'
                 }}
-                className="w-6 h-6 bg-[#FFFFFF] cursor-pointer transition-colors duration-300 hover:bg-lime-400"
+                className={` ${icon.alt==='YT'?"w-8 h-8":"w-6 h-6"}  bg-[#FFFFFF] cursor-pointer transition-colors duration-300 hover:bg-lime-400`}
               />
             ))}
           </div>
