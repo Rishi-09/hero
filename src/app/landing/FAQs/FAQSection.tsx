@@ -7,29 +7,29 @@ import Button from "@/components/Button";
 
 const faqs = [
   {
-    question: "What is Traverse VPN?",
+    question: "Are VPNs legal?",
     answer:
-      "Traverse VPN is a privacy-first service that encrypts your connection, hides your IP address, and helps you browse securely from anywhere.",
+      "Yes, VPNs are legal in most countries. They're simply a tool to protect your privacy online.",
   },
   {
-    question: "What makes VPN different from standard VPN providers?",
+    question: "What makes Traverse one of the best VPNs on the market?",
     answer:
-      "VPN is built specifically for enterprise and corporate environments. Unlike consumer VPN services, we provide scalable enterprise VPN solutions, centralized management, secure access control, and infrastructure designed for business continuity and data protection.",
+      "We focus on speed, security and a clean, simple experience, built to work reliably without slowing you down.",
   },
   {
-    question: "Can VPN support remote and hybrid teams?",
+    question: "Does VPN harm your device?",
     answer:
-      "Yes. Our business VPN solutions are designed for distributed teams. Employees can securely access internal systems from anywhere while maintaining encrypted connections and policy-controlled access.",
+      "Not at all. A VPN only encrypts your connection and doesn't affect your device's health or performance.",
   },
   {
-    question: "Is VPN suitable for multi-location corporate environments?",
+    question: "Can I download and use VPN on multiple devices?",
     answer:
-      "Absolutely. Our corporate VPN solutions support site-to-site connectivity, enabling secure communication between offices, cloud environments, and remote users within a unified infrastructure.",
+      "Yes. You can use your account across all your devices with no hassle.",
   },
   {
-    question: "How secure is your enterprise VPN service?",
+    question: "Does VPN work with online games?",
     answer:
-      "VPN uses advanced encryption protocols, secure tunneling, and centralized access management to protect corporate data. Our architecture is designed to reduce exposure to unauthorized access and network vulnerabilities.",
+      "Yes, it works smoothly for gaming and can even reduce lag by connecting you to better routes.",
   },
 ];
 
