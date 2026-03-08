@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function InstantConnectionSection() {
   return (
-    <section className="relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden text-white py-0 lg:py-40">
+    <section className="relative min-h-[50vh] md:min-h-screen flex items-center justify-center overflow-hidden text-white py-0 lg:py-40">
 
       {/* Top Gradient */}
       <div className="absolute top-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-t from-transparent to-[#010101]" />
@@ -22,12 +22,12 @@ export default function InstantConnectionSection() {
               font-bold
               font-['Space_Grotesk']
               text-white
-              text-center lg:text-left
+              text-left
               drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]
               lg:drop-shadow-[0_0_35px_rgba(255,255,255,0.5)]
 
               lg:relative lg:left-30 lg:mb-40
-              mb-6
+              mb-1
               max-w-[500px] lg:max-w-none
             "
           >
@@ -35,9 +35,9 @@ export default function InstantConnectionSection() {
           </h1>
 
           {/* PHONES IMAGE */}
-          <div className="relative flex justify-center items-center w-full mb-8 lg:mb-0 lg:absolute lg:inset-0 z-10 pointer-events-none">
+          <div className="relative flex justify-center items-center w-auto mb-1 lg:mb-0 lg:absolute lg:inset-0 z-10 pointer-events-none">
 
-            <div className="relative w-[260px] sm:w-[320px] md:w-[420px] lg:w-[900px] aspect-[9/10] lg:h-[1000px] lg:translate-x-8">
+            <div className="relative w-[420px] sm:w-[480px] md:w-[520px] lg:w-[900px] h-[360px] sm:h-[420px] md:h-[520px] lg:h-[1000px] lg:translate-x-10">
 
               <Image
                 src="/nphones.png"
@@ -60,7 +60,7 @@ export default function InstantConnectionSection() {
               tracking-[-0.02em]
               font-bold
               text-white
-              text-center lg:text-right
+              w-full text-right
               drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]
               lg:drop-shadow-[0_0_35px_rgba(255,255,255,0.5)]
 
@@ -73,9 +73,6 @@ export default function InstantConnectionSection() {
 
         </div>
       </div>
-
-      {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 w-full h-32 pointer-events-none bg-gradient-to-b from-transparent to-[#010101]" />
 
     </section>
   );

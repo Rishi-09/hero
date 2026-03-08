@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen flex items-center overflow py-20 lg:py-0 mt-10">
+    <section className="relative w-full min-h-screen flex items-center overflow py-10 lg:py-0 lg:mt-10 mt-0">
       {/* Smooth Green Atmospheric Glow */}
       <div
         className="
