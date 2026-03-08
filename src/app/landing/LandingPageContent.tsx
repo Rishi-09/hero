@@ -9,7 +9,7 @@ import CTASection from "./Footer/CTASection";
 
 export default function LandingPageContent() {
   return (
-    <div className="text-white overflow-x-hidden">
+    <div className="text-white overflow-x-hidden space-y-0 ">
       <div className="fixed inset-0 -z-10">
         <Image
           src="/bg.png"
