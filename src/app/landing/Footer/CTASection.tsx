@@ -43,15 +43,15 @@ export default function CTASection() {
                 type="email"
                 placeholder="Enter Your Email"
                 className="w-full md:w-[300px] h-[52px] px-6 rounded-full
-                bg-[#0b0f14] border border-lime-400/70
+                bg-[#0b0f14] border-2 border-[#67FF1D]
                 text-white outline-none
                 placeholder:text-gray-400 focus:border-lime-400"
               />
 
               <button
                 className="w-full md:w-auto h-[52px] px-10 rounded-full
-                bg-lime-400 text-black font-semibold
-                border-2 border-lime-400
+                bg-[#67FF1D] text-black font-semibold
+                border-2 border-[#67FF1D]
                 transition-all duration-300 ease-in-out
                 hover:bg-transparent hover:text-lime-400"
               >
@@ -90,7 +90,7 @@ export default function CTASection() {
           {/* RIGHT - Links Groups */}
           <div className="flex flex-col sm:flex-row gap-12 md:gap-24 ml-auto">
             {/* Company Section */}
-            <div className="font-['DM_Sans'] flex flex-col items-center lg:items-end text-center lg:text-right gap-3 text-white">
+            <div className="font-['DM_Sans'] flex flex-col items-center lg:items-start text-center lg:text-left gap-3 text-white">
               <span className="text-xl lg:text-2xl mb-2">Company</span>
               <a href="#" className="hover:text-lime-400 font-light transition text-lg">About Us</a>
               <a href="#" className="hover:text-lime-400 font-light transition text-lg">Contact Us</a>
@@ -98,7 +98,7 @@ export default function CTASection() {
             </div>
 
             {/* Platforms Section */}
-            <div className="font-['DM_Sans'] flex flex-col items-center lg:items-end text-center lg:text-right gap-3 text-white">
+            <div className="font-['DM_Sans'] flex flex-col items-center lg:items-start text-center lg:text-start gap-3 text-white">
               <span className="text-xl lg:text-2xl mb-2">Platforms</span>
               <a href="#" className="hover:text-lime-400 font-light transition text-lg whitespace-nowrap">VPN for Android</a>
               <a href="#" className="hover:text-lime-400 font-light transition text-lg whitespace-nowrap">VPN for iPhone</a>
@@ -137,7 +137,7 @@ export default function CTASection() {
         <div className="font-['DM_Sans'] text-[#5C5C5C]">
           <div className="w-full h-[1px] bg-white/20 mb-6"></div>
           
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-center lg:text-left text-sm md:text-base lg:text-[20px]">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-center lg:text-left text-sm md:text-base lg:text-[14px]">
             <div>© 2025, All Rights Reserved</div>
 
             <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4">
