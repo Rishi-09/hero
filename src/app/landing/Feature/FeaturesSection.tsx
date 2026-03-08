@@ -38,42 +38,53 @@ export default function FeaturesSection() {
           - md:gap-10: Restored gap for larger screens
       */}
       {/* Features Grid */}
-      <div className="max-w-[1250px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-        <FeatureCard
-          title="Global Server Access"
-          desc="Connect to servers easily across the globe"
-          type="planet"
-        />
+      <div className="max-w-[1250px] mx-auto justify-center align-middle flex flex-wrap gap-10">
+        <div className="w-[424px]">
+          <FeatureCard
+            title="Global Server Access"
+            desc="Connect to servers easily across the globe"
+            type="planet"
+          />
+        </div>
+        <div className="w-[634.6px]">
+          <FeatureCard
+            title="Fast, Steady Performance"
+            desc="Get high speed servers so your work never slow down"
+            type="performance"
+          />
+        </div>
 
-        <FeatureCard
-          title="Fast, Steady Performance"
-          desc="Get high speed servers so your work never slow down"
-          type="performance"
-        />
+        <div className="w-[513.66px]">
+          <FeatureCard
+            title="Multiple Devices"
+            desc="Protect all your devices with one account"
+            type="devices"
+          />
+        </div>
 
-        <FeatureCard
-          title="Multiple Devices"
-          desc="Protect all your devices with one account"
-          type="devices"
-        />
+        <div className="w-[581.25px]">
+          <FeatureCard
+            title="Split Tunneling"
+            desc="Decide which app takes the secure path"
+            type="split"
+          />
+        </div>
 
-        <FeatureCard
-          title="Split Tunneling"
-          desc="Decide which app takes the secure path"
-          type="split"
-        />
+        <div className="w-[472.67px]">
+          <FeatureCard
+            title="Wi-Fi Protection"
+            desc="Guard your data on shared and public hotspots"
+            type="wifi"
+          />
+        </div>
 
-        <FeatureCard
-          title="Wi-Fi Protection"
-          desc="Guard your data on shared and public hotspots"
-          type="wifi"
-        />
-
-        <FeatureCard
-          title="Kill Switch"
-          desc="Stops internet access until your VPN is back"
-          type="kill"
-        />
+        <div className="w-[581.25]">
+          <FeatureCard
+            title="Kill Switch"
+            desc="Stops internet access until your VPN is back"
+            type="kill"
+          />
+        </div>
       </div>
     </section>
   );
