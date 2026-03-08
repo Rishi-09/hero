@@ -140,7 +140,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
         {type === "performance" && (
           <div className="relative w-full h-full">
             {/* Line length and position restored to your original right-[80px] */}
-            <div className="absolute bottom-9 left-0 right-[80px] flex flex-col justify-between h-[120px] z-10">
+            <div className="absolute  bottom-3 lg:bottom-9 md:bottom-9 left-0 right-[30px] lg:right-[80px] md:right-[80px] flex flex-col justify-between h-[120px] z-10">
               {[0, 1, 2, 3, 4].map((i) => (
                 <div
                   key={i}
@@ -171,7 +171,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
                 </div>
               ))}
             </div>
-            <div className="absolute top-18 -translate-y-1/2 right-[-130px] w-[220px] h-[220px] rounded-full border border-[#7CFF00]/30 bg-gradient-to-l from-[#7CFF00]/10 to-transparent shadow-[0_0_80px_rgba(124,255,0,0.15)]" />
+            <div className="absolute top-18 -translate-y-1/2  right-[-170px] lg:right-[-130px] w-[220px] h-[220px] rounded-full border border-[#7CFF00]/30 bg-gradient-to-l from-[#7CFF00]/10 to-transparent shadow-[0_0_80px_rgba(124,255,0,0.15)]" />
           </div>
         )}
         {/* ================= DEVICES ================= */}
@@ -233,7 +233,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
                   ? { scale: 1.4, opacity: 0.15 }
                   : { scale: 1, opacity: 0.2 }
               }
-              className="absolute w-48 h-48 rounded-full bg-[#B6FF00] blur-3xl pointer-events-none"
+              className="absolute w-48 h-48 rounded-full bg-[#B6FF00] blur-3xl lg:blur-2xl pointer-events-none"
             />
 
             <motion.div
@@ -251,7 +251,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
                     }
               }
               transition={{ duration: 0.4 }}
-              className="relative w-44 h-44 z-10 mb-30"
+              className="relative w-34 h-34 lg:w-44 md::w-44 lg:h-44 md:h-44 z-10 mb-30"
             >
               <Image
                 src="/shield.png"
@@ -336,7 +336,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
               className="relative w-24 h-24 flex items-center justify-center -bottom-2"
             >
               {/* WIFI ARCS */}
-              <div className="absolute -top-18 left-1/2 -translate-x-1/2 w-40 h-28">
+              <div className="absolute -top-15 lg:-top-18 left-1/2 -translate-x-1/2 w-40 h-28">
                 <svg
                   viewBox="0 0 24 24"
                   className="w-full h-full overflow-visible"
