@@ -9,23 +9,27 @@ const faqs = [
   {
     question: "What is Traverse VPN?",
     answer:
-      "Figma ipsum component variant main layer. Export rotate blur pen scrolling. Figma ipsum component variant main layer.",
+      "Traverse VPN is a privacy-first service that encrypts your connection, hides your IP address, and helps you browse securely from anywhere.",
   },
   {
-    question: "Question 2?",
-    answer: "This is the answer for question 2.",
+    question: "Will Traverse slow down my internet?",
+    answer:
+      "Premium servers are optimized for speed and stability. Your final speed depends on location and network conditions, but streaming and daily browsing are built to stay smooth.",
   },
   {
-    question: "Question 3?",
-    answer: "This is the answer for question 3.",
+    question: "Can I use one account on multiple devices?",
+    answer:
+      "Yes. You can protect your phone, tablet, and desktop with one account, so your connection stays secure across your full device setup.",
   },
   {
-    question: "Question 4?",
-    answer: "This is the answer for question 4.",
+    question: "What does Kill Switch do?",
+    answer:
+      "Kill Switch immediately blocks internet traffic if the VPN drops unexpectedly, preventing unprotected traffic from leaking your data.",
   },
   {
-    question: "Question 5?",
-    answer: "This is the answer for question 5.",
+    question: "Does Traverse support split tunneling?",
+    answer:
+      "Yes. Split tunneling lets you choose which apps use the VPN and which apps use your regular connection for better flexibility.",
   },
 ];
 

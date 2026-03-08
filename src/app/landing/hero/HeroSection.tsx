@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen flex items-center overflow py-30 lg:py-0 mt-10">
+    <section className="relative w-full min-h-screen flex items-center overflow py-20 lg:py-0 mt-10">
       {/* Smooth Green Atmospheric Glow */}
       <div
         className="
@@ -19,7 +19,7 @@ export default function HeroSection() {
       />
 
       {/* MAIN CONTENT */}
-      <div className="relative z-10 max-w-7xl  lg:pl-120 pr-0 md:pr-4 flex flex-col lg:flex-row items-center ">
+      <div className="relative z-10 max-w-7xl  -right-127 flex flex-col lg:flex-row items-center ">
         
         {/* LEFT SIDE CONTENT WRAPPER */}
         {/* Note: xl:right-100 preserved for your 14-inch layout */}
@@ -40,7 +40,7 @@ export default function HeroSection() {
           {/* Phones Image Container */}
           {/* Earth for Mobile */}
 <div className="flex justify-center items-center mt-8 md:hidden">
-  <div className="relative w-[400px] h-[460px]">
+  <div className="relative w-[700px] h-[760px]">
     <Image
       src="/earth.png"
       alt="Earth"
@@ -50,8 +50,8 @@ export default function HeroSection() {
   </div>
 </div>
           {/* On mobile, we remove the negative offsets so it stays in flow */}
-          <div className="relative w-full hidden md:block max-w-[450px] md:max-w-[650px] lg:w-[900px] 
-                h-[350px] md:h-[500px] lg:h-[650px] 
+          <div className="relative w-full hidden md:block max-w-[450px] md:max-w-[650px] lg:w-[800px] 
+                h-[350px] md:h-[500px] lg:h-[600px] 
                 lg:relative lg:right-40 lg:-top-30 mt-5 md:display-none ">
   <Image
     src="/phones.png"
@@ -83,7 +83,7 @@ export default function HeroSection() {
 
       {/* MASSIVE CROPPED EARTH */}
       {/* Adjusted responsiveness: scale down for tablets, hide on small mobile to prevent overlap */}
-      <div className="absolute right-[-20%] lg:right-[-12%] top-[22%] lg:top-[62%] 
+      <div className="absolute right-[-20%] lg:right-[-12%] top-[22%] lg:top-[66%] 
                       scale-110 md:scale-150 lg:scale-220 -translate-y-1/2 
                       w-[300px] h-[400px] md:w-[600px] md:h-[1000px] lg:w-[600px] lg:h-[1600px] 
                       hidden md:block -z-10 opacity-50 lg:opacity-100 ">

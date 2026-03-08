@@ -25,7 +25,7 @@ export default function FeaturesSection() {
 
       {/* Main Heading */}
       {/* Changed text size to be fluid: 32px on mobile, 48px on laptop */}
-      <h2 className="text-[32px] md:text-[40px] lg:text-[48px] leading-[1.1] md:leading-[100%] tracking-[-0.01em] text-white text-glow-white bold-heading font-bold text-center mb-10 md:mb-16">
+      <h2 className="text-[32px] md:text-[40px] lg:text-[56px] leading-[1.1] md:leading-[100%] tracking-[-0.01em] text-white text-glow-white bold-heading font-bold text-center mb-10 md:mb-16">
         What <span className="text-[#67FF1D] text-glow-green">Traverse</span>{" "}
         Brings
         <br className="hidden md:block" /> To You?
@@ -38,7 +38,7 @@ export default function FeaturesSection() {
           - md:gap-10: Restored gap for larger screens
       */}
       {/* Features Grid */}
-      <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <div className="max-w-[1250px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
         <FeatureCard
           title="Global Server Access"
           desc="Connect to servers easily across the globe"
