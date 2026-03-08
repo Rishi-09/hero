@@ -37,7 +37,7 @@ export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#010101] min-h-screen py-20 text-white relative">
+    <section className="bg-[#010101] min-h-[80vh] py-20 text-white relative">
       
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Top Button */}

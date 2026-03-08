@@ -26,16 +26,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-  className={`fixed w-full z-50 transition-all duration-300 
-  top-0 px-5
+   <nav
+  className={`lg:fixed w-full z-50 transition-all duration-300  
+  lg:top-0 px-5
   lg:left-1/2 lg:-translate-x-1/2 lg:max-w-[1200px] 
   ${scrolled
-    ? "bg-[#010101] lg:rounded-full shadow-lg shadow-black/40 lg:top-4"
-    : "bg-transparent"}
+  ? "lg:bg-[#010101] lg:rounded-full lg:shadow-lg lg:shadow-black/40 lg:top-4"
+  : "lg:bg-transparent"}
 `}
 >
-      <div className="max-w-full mx-auto  px-5 h-16 flex items-center justify-between">
+      <div className="max-w-full mx-auto px-5 h-16 flex items-center justify-between">
         {/* Left Section */}
         <div className="flex items-center gap-12">
           {/* Logo */}
