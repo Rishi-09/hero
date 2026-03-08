@@ -25,13 +25,13 @@ export default function FeatureCard({ title, desc, type }: Props) {
     },
     {
       d: "M5.5 10.5C7.5 8.5 9.5 7.5 12 7.5C14.5 7.5 16.5 8.5 18.5 10.5",
-      delay: 0.2,
+      delay: 0.3,
     },
-    { d: "M2.5 7.5C5.5 4.5 8.5 3 12 3C15.5 3 18.5 4.5 21.5 7.5", delay: 0.4 },
+    { d: "M2.5 7.5C5.5 4.5 8.5 3 12 3C15.5 3 18.5 4.5 21.5 7.5", delay: 0.5 },
   ];
   return (
     <div
-      className="relative rounded-[32px] p-8 h-[290px] w-full overflow-hidden group border border-white/5 bg-[linear-gradient(180deg,#0e1117_0%,#0a0d12_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] cursor-pointer"
+      className="relative rounded-[32px] p-8 h-[290px] w-full overflow-hidden border border-white/[0.06] bg-[linear-gradient(180deg,#0B0B0B_0%,#050505_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
       // HOVER LOGIC MOVED TO MAIN CARD WRAPPER
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -55,7 +55,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
             animate={isHovered ? "hover" : "rest"}
             className="relative w-[350px] h-full"
           >
-            <div className="absolute bottom-0 left-0 w-40 h-40">
+            <div className="absolute bottom-0 -left-10 w-40 h-40">
               <Image src="/planet.png" alt="" fill className="object-contain" />
 
               <motion.div
@@ -81,12 +81,12 @@ export default function FeatureCard({ title, desc, type }: Props) {
               </motion.div>
             </div>
 
-            <div className="absolute bottom-3.5 left-[115px]">
+            <div className="absolute bottom-3.5 left-[80px]">
               {[
-                { angle: -14, length: 280 },
+                { angle: -12, length: 280 },
                 { angle: -4, length: 280 },
                 { angle: 6, length: 280 },
-                { angle: 14, length: 290 },
+                { angle: 12, length: 290 },
               ].map((line, i) => (
                 <div
                   key={i}
@@ -165,7 +165,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
         {/* ================= DEVICES ================= */}
         {type === "devices" && (
           <div className="relative w-full h-[220px] flex items-center justify-center overflow-hidden">
-            <div className="relative w-[320px] h-[160px] z-10 mb-20 -ml-1 -mr-10">
+            <div className="relative w-[320px] h-[160px] z-10 mb-20 ">
               <Image
                 src="/devices.png"
                 alt="Devices"
@@ -178,9 +178,9 @@ export default function FeatureCard({ title, desc, type }: Props) {
               animate={
                 isHovered
                   ? {
-                      x: ["-220px", "220px", "220px", "-220px"],
+                      x: ["-195px", "195px", "195px", "-195px"],
                       zIndex: [20, 20, 0, 0],
-                      scale: [1, 1.1, 0.85, 1],
+                      scale: [1, 1, 1, 1],
                       filter: [
                         "blur(0px)",
                         "blur(0px)",
@@ -188,7 +188,7 @@ export default function FeatureCard({ title, desc, type }: Props) {
                         "blur(0px)",
                       ],
                     }
-                  : { x: "-180px", zIndex: 20, scale: 1 }
+                  : { x: "-195px", zIndex: 20, scale: 1 }
               }
               transition={
                 isHovered
@@ -253,16 +253,16 @@ export default function FeatureCard({ title, desc, type }: Props) {
               animate={
                 isHovered
                   ? {
-                      x: [-40, -10, -40],
-                      y: [-30, -5, -30],
-                      scale: [1, 0.7, 1],
-                      opacity: [1, 0.5, 1],
+                      x: [-40, -40, -40],
+                      y: [-50, -30, -50],
+                      scale: [1, 1, 1],
+                      opacity: [1, 1, 1],
                     }
-                  : { x: -40, y: -30, opacity: 1 }
+                  : { x: -40, y: -50, opacity: 1 }
               }
               transition={{
                 repeat: isHovered ? Infinity : 0,
-                duration: 2,
+                duration: 4,
                 ease: "easeInOut",
               }}
               className="absolute left-22 top-4 w-20 h-20 z-20 pointer-events-none mb-20"
@@ -279,18 +279,18 @@ export default function FeatureCard({ title, desc, type }: Props) {
               animate={
                 isHovered
                   ? {
-                      x: [40, 10, 40],
-                      y: [-30, -5, -30],
-                      scale: [1, 0.7, 1],
+                      x: [40, 40, 40],
+                      y: [-50, -30, -50],
+                      scale: [1, 1, 1],
                       opacity: [1, 0.5, 1],
                     }
-                  : { x: 40, y: -30, opacity: 1 }
+                  : { x: 40, y: -50, opacity: 1 }
               }
               transition={{
                 repeat: isHovered ? Infinity : 0,
-                duration: 2,
+                duration: 4,
                 ease: "easeInOut",
-                delay: isHovered ? 0.2 : 0,
+                
               }}
               className="absolute right-22 top-4 w-20 h-20 z-20 pointer-events-none mb-40"
             >
@@ -312,13 +312,13 @@ export default function FeatureCard({ title, desc, type }: Props) {
               animate={
                 isHovered
                   ? {
-                      y: [0, -5, 0],
+                      y: [0, 0, 0],
                       filter: "drop-shadow(0 0 25px rgba(182,255,0,0.8))",
                     }
                   : { y: 0 }
               }
               transition={{
-                duration: 2,
+                duration: 3,
                 repeat: isHovered ? Infinity : 0,
                 ease: "easeInOut",
               }}
@@ -356,14 +356,14 @@ export default function FeatureCard({ title, desc, type }: Props) {
                                 opacity: [0, 1, 0],
                                 filter: [
                                   "blur(0px) brightness(1)",
-                                  "blur(1px) brightness(1.5) drop-shadow(0 0 8px rgba(255,255,255,0.8))",
+                                  "blur(0.5px) brightness(1.5) drop-shadow(0 0 2px rgba(255,255,255,0.3))",
                                   "blur(0px) brightness(1)",
                                 ],
                               }
                             : { opacity: 0 }
                         }
                         transition={{
-                          duration: 1.5,
+                          duration: 2.5,
                           repeat: isHovered ? Infinity : 0,
                           delay: arc.delay,
                           ease: "easeInOut",
@@ -374,12 +374,14 @@ export default function FeatureCard({ title, desc, type }: Props) {
                 </svg>
               </div>
 
-              <Image
+             <div className="w-[500px] h-[500px]" >
+               <Image
                 src="/lock.png"
                 alt="Lock"
                 fill
                 className="object-contain"
               />
+             </div>
             </motion.div>
           </div>
         )}
