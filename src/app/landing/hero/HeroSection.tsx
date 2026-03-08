@@ -27,13 +27,13 @@ export default function HeroSection() {
           
           {/* Heading */}
           <h1
-            className="font-['Space_Grotesk'] w-[380px] text-3xl md:text-6xl lg:text-5xl leading-tight lg:leading-[1.05] font-light tracking-wider text-[#FFFFFF] drop-shadow-[0_0_0px_rgba(34,197,94,0.2)] text-glow-white "
+            className="font-['Space_Grotesk'] w-[380px] lg:w-xl text-3xl md:text-6xl lg:text-5xl leading-tight lg:leading-[1.05] font-light tracking-wider text-[#FFFFFF] drop-shadow-[0_0_0px_rgba(34,197,94,0.2)] text-glow-white "
           >
             Privacy that follows you everywhere
           </h1>
 
           {/* Subtext */}
-          <p className="mt-6 text-gray-300 w-[350px] text-lg md:text-xl lg:text-2xl max-w-lg">
+          <p className="mt-6 text-gray-300 w-[350px] lg:w-xl text-lg md:text-xl lg:text-2xl max-w-lg">
             Access worldwide content and keep your digital life shielded
           </p>
 
