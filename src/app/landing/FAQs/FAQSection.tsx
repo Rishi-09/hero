@@ -7,29 +7,29 @@ import Button from "@/components/Button";
 
 const faqs = [
   {
-    question: "What is Traverse VPN?",
+    question: "Are VPNs legal?",
     answer:
-      "Traverse VPN is a privacy-first service that encrypts your connection, hides your IP address, and helps you browse securely from anywhere.",
+      "Yes, VPNs are legal in most countries. They're simply a tool to protect your privacy online.",
   },
   {
-    question: "Will Traverse slow down my internet?",
+    question: "What makes Traverse one of the best VPNs on the market?",
     answer:
-      "Premium servers are optimized for speed and stability. Your final speed depends on location and network conditions, but streaming and daily browsing are built to stay smooth.",
+      "We focus on speed, security and a clean, simple experience, built to work reliably without slowing you down.",
   },
   {
-    question: "Can I use one account on multiple devices?",
+    question: "Does VPN harm your device?",
     answer:
-      "Yes. You can protect your phone, tablet, and desktop with one account, so your connection stays secure across your full device setup.",
+      "Not at all. A VPN only encrypts your connection and doesn't affect your device's health or performance.",
   },
   {
-    question: "What does Kill Switch do?",
+    question: "Can I download and use VPN on multiple devices?",
     answer:
-      "Kill Switch immediately blocks internet traffic if the VPN drops unexpectedly, preventing unprotected traffic from leaking your data.",
+      "Yes. You can use your account across all your devices with no hassle.",
   },
   {
-    question: "Does Traverse support split tunneling?",
+    question: "Does VPN work with online games?",
     answer:
-      "Yes. Split tunneling lets you choose which apps use the VPN and which apps use your regular connection for better flexibility.",
+      "Yes, it works smoothly for gaming and can even reduce lag by connecting you to better routes.",
   },
 ];
 
@@ -141,25 +141,25 @@ export default function FAQSection() {
               lg:ml-20
             "
           >
-           <div className="w-full h-full rounded-[16px] bg-[#010101] p-6 md:p-10 overflow-hidden relative">
+           <div className="w-full h-full rounded-[16px] bg-[#010101] p-4 md:p-10 overflow-hidden relative">
   {/* mode="popLayout" use karne se purana text niche jayega aur naya turant upar aane lagega */}
   <AnimatePresence mode="popLayout">
     {activeIndex !== null ? (
       <motion.div
         key={activeIndex}
         // Initial: Text box ke kafi niche se start hoga aur blur rahega
-        initial={{ y: 60, opacity: 0, filter: "blur(15px)" }}
+        initial={{ y: 120, opacity: 0, filter: "blur(15px)" }}
         // Animate: Apni asli jagah (top) par aayega aur clear ho jayega
         animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
         // Exit: Purana answer niche ki taraf slide karke blur hote hue gayab hoga
-        exit={{ y: 60, opacity: 0, filter: "blur(15px)" }}
+        exit={{ y: 120, opacity: 0, filter: "blur(15px)" }}
         transition={{ 
           duration: 0.6, 
           ease: [0.22, 1, 0.36, 1] // Smooth exponential easing
         }}
         className="w-full flex flex-col justify-start items-start"
       >
-        <p className="font-['DM_Sans'] text-white text-base md:text-2xl leading-relaxed text-left">
+        <p className="font-['DM_Sans'] text-white text-base md:text-2xl leading-relaxed text-left pb-6 md:pb-10">
           {faqs[activeIndex].answer}
         </p>
       </motion.div>

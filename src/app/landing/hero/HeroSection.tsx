@@ -19,7 +19,7 @@ export default function HeroSection() {
       />
 
       {/* MAIN CONTENT */}
-      <div className="relative z-10 max-w-7xl  -right-127 flex flex-col lg:flex-row items-center ">
+      <div className="relative z-10 max-w-7xl  -right-122 flex flex-col lg:flex-row items-center ">
         
         {/* LEFT SIDE CONTENT WRAPPER */}
         {/* Note: xl:right-100 preserved for your 14-inch layout */}
@@ -51,8 +51,8 @@ export default function HeroSection() {
 </div>
           {/* On mobile, we remove the negative offsets so it stays in flow */}
           <div className="relative w-full hidden md:block max-w-[450px] md:max-w-[650px] lg:w-[800px] 
-                h-[350px] md:h-[500px] lg:h-[600px] 
-                lg:relative lg:right-40 lg:-top-30 mt-5 md:display-none ">
+                h-[350px] md:h-[500px] lg:h-[430px] 
+                lg:relative lg:right-48 lg:-top-30 mt-21 md:display-none ">
   <Image
     src="/phones.png"
     alt="Phones"
@@ -62,20 +62,20 @@ export default function HeroSection() {
 </div>
 
           {/* Store Buttons */}
-          <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 mt-6 lg:mt-0 lg:relative lg:bottom-50">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 mt-6 lg:mt-21 lg:relative lg:bottom-50">
             <Image
               src="/appStore.png"
               alt="App Store"
               width={160}
               height={55}
-              className="w-[140px] md:w-[160px] h-auto hover:scale-105 transition duration-300 cursor-pointer"
+              className="w-[140px] md:w-[120px] h-auto hover:scale-105 transition duration-300 cursor-pointer"
             />
             <Image
               src="/playStore.png"
               alt="Google Play"
               width={160}
               height={55}
-              className="w-[140px] md:w-[160px] h-auto hover:scale-105 transition duration-300 cursor-pointer"
+              className="w-[140px] mg:w-[120px] md:w-[120px] h-auto hover:scale-105 transition duration-300 cursor-pointer"
             />
           </div>
         </div>
