@@ -234,10 +234,10 @@ bg-gradient-to-t from-transparent to-[#030A00]"
         <div className="font-['DM_Sans'] text-[#5C5C5C]">
           <div className="w-full h-[1px] bg-white/20 mb-6"></div>
 
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-center lg:text-left text-sm md:text-base lg:text-[14px]">
-            <div>© 2025, All Rights Reserved</div>
+          <div className="flex flex-col lg:flex-row justify-between items-start px-8 gap-4 text-center lg:text-left text-sm md:text-base lg:text-[14px]">
+            <div className="absolute lg:display-inline md:display-inline text-lg -bottom-9 lg:bottom-0 " >© 2025, All Rights Reserved</div>
 
-            <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4">
+            <div className="flex flex-wrap justify-start text-lg lg:justify-end md:justify-end text-[xl] w-[100px] lg:w-full items-center gap-2 md:gap-4">
               <span className="hover:text-lime-400 transition cursor-pointer whitespace-nowrap">
                 Privacy Policy
               </span>
