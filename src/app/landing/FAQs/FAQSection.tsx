@@ -41,7 +41,7 @@ export default function FAQSection() {
       
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Top Button */}
-        <div className="flex justify-center mt-10 mb-6">
+        <div className="flex justify-center mt-10 mb-10">
           <Button text={"FAQs"} />
         </div>
 

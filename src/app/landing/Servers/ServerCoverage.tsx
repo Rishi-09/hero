@@ -37,7 +37,7 @@ export default function ServerCoverage() {
         </div>
 
         {/* Top Label */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center mb-10">
           <Button text={"Servers"} />
         </div>
       </div>

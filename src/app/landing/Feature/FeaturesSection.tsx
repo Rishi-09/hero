@@ -19,13 +19,13 @@ export default function FeaturesSection() {
       </style>
 
       {/* Top Label */}
-      <div className="flex justify-center mb-6">
+      <div className="flex justify-center mb-10">
         <Button text={"Features"} />
       </div>
 
       {/* Main Heading */}
       {/* Changed text size to be fluid: 32px on mobile, 48px on laptop */}
-      <h2 className="text-[32px] md:text-[40px] lg:text-[56px] leading-[1.1] md:leading-[100%] tracking-[-0.01em] text-white text-glow-white bold-heading font-bold text-center mb-10 md:mb-16">
+      <h2 className="text-[32px] md:text-[40px] lg:text-[56px] leading-[1.1] md:leading-[100%] tracking-[-0.01em] text-white text-glow-white bold-heading font-bold text-center mb-10 md:mb-18">
         What <span className="text-[#67FF1D] text-glow-green">Traverse</span>{" "}
         Brings
         <br className="hidden md:block" /> To You?
