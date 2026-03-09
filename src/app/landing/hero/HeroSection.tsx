@@ -91,7 +91,7 @@ export default function HeroSection() {
           src="/earth.png"
           alt="Earth"
           fill
-          className="object-contain animate-[spin_100s_linear_infinite_reverse] drop-shadow-[0_0_50px_rgba(34,197,94,0.9)]"
+          className="object-contain animate-[spin_100s_linear_infinite] drop-shadow-[0_0_50px_rgba(34,197,94,0.9)]"
         />
       </div>
     </section>

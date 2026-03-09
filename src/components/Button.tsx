@@ -9,7 +9,7 @@ const Button = ({ text }: ButtonProps) => {
     <button
       className="group relative flex items-center justify-center overflow-hidden transition-all duration-300"
       style={{
-        width: "120px",
+        width:"auto",
         height: "50px",
         borderRadius: "23px",
         padding: "16px 20px",
