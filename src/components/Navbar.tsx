@@ -33,7 +33,7 @@ const Navbar = () => {
                   ${
                     scrolled
                       ? "bg-[#010101] lg:bg-[#010101] lg:rounded-full lg:shadow-lg lg:shadow-black/40 lg:top-4"
-                      : "bg-transparent"
+                      : "bg-transparent lg:top-4"
                   }
 `}
     >

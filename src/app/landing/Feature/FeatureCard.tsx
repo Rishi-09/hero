@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Space_Grotesk } from "next/font/google";
 import { useEffect } from "react";
-
+const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["500"],
@@ -395,48 +395,135 @@ export default function FeatureCard({ title, desc, type }: Props) {
           </div>
         )}
         {/* ================= KILL SWITCH ================= */}
-        {type === "kill" && (
-          <div className="relative w-full h-40 mx-auto flex items-center justify-center">
-            <motion.div
-              initial={{ x: 0 }}
-              animate={animateActive ? { x: -70 } : { x: 0 }}
-              transition={{ duration: 2, ease: [1, 1, 0.36, 1] }}
-              className="absolute left-[calc(50%-150px)] w-[150px] h-[3px] bg-[#B6FF00] rounded-full shadow-[0_0_15px_rgba(182,255,0,0.8)] z-20"
-            />
+{type === "kill" && (
+  <div className="relative w-full h-40 mx-auto flex items-center justify-center">
 
-            <motion.div
-              initial={{ x: 0 }}
-              animate={animateActive ? { x: 70 } : { x: 0 }}
-              transition={{ duration: 2, ease: [1, 1, 0.36, 1] }}
-              className="absolute right-[calc(50%-150px)] w-[150px] h-[3px] bg-[#B6FF00] rounded-full shadow-[0_0_15px_rgba(182,255,0,0.8)] z-20"
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={
-                animateActive
-                  ? {
-                      opacity: 1,
-                      scale: 1,
-                      filter: "drop-shadow(0 0 25px rgba(182,255,0,0.7))",
-                    }
-                  : { opacity: 0, scale: 0.8 }
-              }
-              transition={{
-                duration: 0.45,
-                delay: animateActive ? 0.8 : 0,
-                ease: "easeOut",
-              }}
-              className="relative z-10 w-20 h-20"
-            >
-              <Image
-                src="/Vector.svg"
-                alt="logo"
-                fill
-                className="object-contain"
-              />
-            </motion.div>
-          </div>
-        )}
+    {/* LEFT LINE */}
+    <motion.div
+      initial={{ x: 0 }}
+      animate={
+        isMobile
+          ? { x: [-70, 70, -70] }
+          : animateActive
+          ? { x: -70 }
+          : { x: 0 }
+      }
+      transition={
+        isMobile
+          ? { duration: 2, ease: [1, 1, 0.36, 1], repeat: Infinity }
+          : { duration: 2, ease: [1, 1, 0.36, 1] }
+      }
+      className="absolute left-[calc(50%-150px)] w-[150px] h-[3px] bg-[#B6FF00] rounded-full shadow-[0_0_15px_rgba(182,255,0,0.8)] z-20"
+    />
+
+    {/* RIGHT LINE */}
+    <motion.div
+      initial={{ x: 0 }}
+      animate={
+        isMobile
+          ? { x: [70, -70, 70] }
+          : animateActive
+          ? { x: 70 }
+          : { x: 0 }
+      }
+      transition={
+        isMobile
+          ? { duration: 2, ease: [1, 1, 0.36, 1], repeat: Infinity }
+          : { duration: 2, ease: [1, 1, 0.36, 1] }
+      }
+      className="absolute right-[calc(50%-150px)] w-[150px] h-[3px] bg-[#B6FF00] rounded-full shadow-[0_0_15px_rgba(182,255,0,0.8)] z-20"
+    />
+
+    {/* SHIELD */}
+    {/* ================= KILL SWITCH ================= */}
+{type === "kill" && (
+  <div className="relative w-full h-40 mx-auto flex items-center justify-center">
+
+    {/* LEFT LINE */}
+    <motion.div
+      initial={{ x: 0 }}
+      animate={
+        isMobile
+          ? { x: [-70, 70, -70] } // open → close → open
+          : animateActive
+          ? { x: -70 }
+          : { x: 0 }
+      }
+      transition={
+        isMobile
+          ? { duration: 2, ease: [1, 1, 0.36, 1], repeat: Infinity }
+          : { duration: 2, ease: [1, 1, 0.36, 1] }
+      }
+      className="absolute left-[calc(50%-150px)] w-[150px] h-[3px] bg-[#B6FF00] rounded-full shadow-[0_0_15px_rgba(182,255,0,0.8)] z-20"
+    />
+
+    {/* RIGHT LINE */}
+    <motion.div
+      initial={{ x: 0 }}
+      animate={
+        isMobile
+          ? { x: [70, -70, 70] } // open → close → open
+          : animateActive
+          ? { x: 70 }
+          : { x: 0 }
+      }
+      transition={
+        isMobile
+          ? { duration: 2, ease: [1, 1, 0.36, 1], repeat: Infinity }
+          : { duration: 2, ease: [1, 1, 0.36, 1] }
+      }
+      className="absolute right-[calc(50%-150px)] w-[150px] h-[3px] bg-[#B6FF00] rounded-full shadow-[0_0_15px_rgba(182,255,0,0.8)] z-20"
+    />
+
+    {/* SHIELD */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={
+        isMobile
+          ? {
+              // OPEN → visible
+              // CLOSED → invisible
+              // OPEN → visible
+              opacity: [1, 0, 1],
+              scale: [1, 0, 1],
+              filter: [
+                "drop-shadow(0 0 25px rgba(182,255,0,0.7))",
+                "drop-shadow(0 0 0px rgba(182,255,0,0))",
+                "drop-shadow(0 0 25px rgba(182,255,0,0.7))",
+              ],
+            }
+          : animateActive
+          ? {
+              opacity: 1,
+              scale: 1,
+              filter: "drop-shadow(0 0 25px rgba(182,255,0,0.7))",
+            }
+          : { opacity: 0, scale: 0.8 }
+      }
+      transition={
+        isMobile
+          ? {
+              duration: 2,
+              ease: [1, 1, 0.36, 1], // same easing as lines
+              times: [0, 0.5, 1],
+              repeat: Infinity,
+            }
+          : { duration: 0.45, delay: animateActive ? 0.8 : 0, ease: "easeOut" }
+      }
+      className="relative z-10 w-20 h-20"
+    >
+      <Image
+        src="/Vector.svg"
+        alt="logo"
+        fill
+        className="object-contain"
+      />
+    </motion.div>
+
+  </div>
+)}
+  </div>
+)}
       </div>
     </div>
   );

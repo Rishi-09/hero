@@ -58,7 +58,7 @@ export default function FAQSection() {
             mb-12 md:mb-24
           "
         >
-          Your questions, <br /> <span className="text-lime-400">covered</span>
+          Your questions, <span className="text-lime-400">covered</span>
         </h2>
 
         {/* Layout */}
@@ -141,7 +141,7 @@ export default function FAQSection() {
               rounded-[17px]
               bg-gradient-to-b
               from-white
-              to-[rgba(52,52,52,0.63)]
+              to-[rgba(52,52,52,0.3)]
               p-[1px]
               mt-6 lg:mt-0
               lg:ml-20
@@ -185,9 +185,7 @@ export default function FAQSection() {
           </div>
         </div>
       </div>
-      {/* Bottom fade into footer */}
-<div className="absolute bottom-0 left-0 w-full h-40 pointer-events-none 
-bg-gradient-to-b from-transparent via-[#010101] to-[#030A00]" />
+      
     </section>
   );
 }

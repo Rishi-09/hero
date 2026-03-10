@@ -238,15 +238,15 @@ bg-gradient-to-t from-transparent to-[#030A00]"
             <div className="absolute lg:display-inline md:display-inline text-lg -bottom-9 lg:bottom-0 " >© 2025, All Rights Reserved</div>
 
             <div className="flex flex-wrap justify-start text-lg lg:justify-end md:justify-end text-[xl] w-[100px] lg:w-full items-center gap-2 md:gap-4">
-              <span className="hover:text-lime-400 transition cursor-pointer whitespace-nowrap">
+              <span className=" transition cursor-pointer whitespace-nowrap">
                 Privacy Policy
               </span>
               <span className="hidden sm:inline">|</span>
-              <span className="hover:text-lime-400 transition cursor-pointer whitespace-nowrap">
+              <span className=" transition cursor-pointer whitespace-nowrap">
                 Terms of Use
               </span>
               <span className="hidden sm:inline">|</span>
-              <span className="hover:text-lime-400 transition cursor-pointer whitespace-nowrap">
+              <span className=" transition cursor-pointer whitespace-nowrap">
                 Sitemap
               </span>
             </div>
